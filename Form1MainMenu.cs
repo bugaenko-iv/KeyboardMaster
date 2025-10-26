@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Клавиатурный_тренажер_KeyboardMaster
 {
     public partial class Form1MainMenu : Form
     {
-        bool isLeftMouseDown;
+        bool isLeftMouseDown, isSymbolTrue;
         Point startPoint;
+        string labelText;
+        string typingText;
+        char symbolLabel, symbolTyping;
+        int numberLabelSymbol = 0;
 
         public Form1MainMenu()
         {
@@ -17,6 +23,13 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Activated += Form1MainMenu_Activated;
             this.Resize += Form1MainMenu_Resize;
             this.Size = new Size(1389, 795); // Установите фиксированный размер
+            guna2TextBox1Typing.Focus();
+        }
+
+        private void Form1MainMenu_Load(object sender, EventArgs e)
+        {
+            labelText = label1Text.Text;
+            this.ActiveControl = guna2TextBox1Typing;
         }
 
         private void Form1MainMenu_Shown(object sender, EventArgs e)
@@ -71,6 +84,34 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void guna2Button1CollapseApll_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized; // Сворачивание программы
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            typingText = guna2TextBox1Typing.Text;
+
+            if (!string.IsNullOrEmpty(guna2TextBox1Typing.Text))
+            {
+                for (int i = 0; i < typingText.Length; i++)
+                {
+                    symbolTyping = typingText[i];
+                }
+
+                for (int i = numberLabelSymbol; i < labelText.Length;)
+                {
+                    symbolLabel = labelText[i];
+                    break;
+                }
+
+                if (symbolTyping.ToString() == symbolLabel.ToString()) 
+                {
+                    numberLabelSymbol += 1;
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка");
+                }
+            }
         }
     }
 }
