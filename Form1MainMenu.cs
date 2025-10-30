@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Клавиатурный_тренажер_KeyboardMaster
 {
@@ -13,7 +14,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         string labelText;
         string typingText;
         char symbolLabel, symbolTyping;
-        int numberLabelSymbol = 0;
+        int numberSymbol;
 
         public Form1MainMenu()
         {
@@ -31,6 +32,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             labelText = label1Text.Text;
             this.ActiveControl = guna2TextBox1Typing;
         }
+
+        #region Граница формы
 
         private void Form1MainMenu_Shown(object sender, EventArgs e)
         {
@@ -56,6 +59,11 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             }
         }
 
+        #endregion
+
+
+        #region Перемещение формы мышью  
+
         private void panel1ControlForm1_MouseDown(object sender, MouseEventArgs e)
         {
             isLeftMouseDown = true;
@@ -76,6 +84,11 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             }
         }
 
+        #endregion
+
+
+        #region Управление формой кнопками 
+
         private void guna2Button1ExitApll_Click(object sender, EventArgs e)
         {
             Application.Exit(); // Закрытие программы
@@ -86,6 +99,11 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.WindowState = FormWindowState.Minimized; // Сворачивание программы
         }
 
+        #endregion
+
+
+        #region Печать с клавиатуры 
+
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
             typingText = guna2TextBox1Typing.Text;
@@ -95,23 +113,29 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 for (int i = 0; i < typingText.Length; i++)
                 {
                     symbolTyping = typingText[i];
+                    numberSymbol = i;
                 }
 
-                for (int i = numberLabelSymbol; i < labelText.Length;)
+                for (int i = numberSymbol; i < labelText.Length;)
                 {
                     symbolLabel = labelText[i];
                     break;
                 }
 
-                if (symbolTyping.ToString() == symbolLabel.ToString()) 
+                if (symbolTyping.ToString() == symbolLabel.ToString())
                 {
-                    numberLabelSymbol += 1;
+                    guna2TextBox1Typing.ForeColor = Color.White;
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка");
+                    guna2TextBox1Typing.ForeColor = Color.Red;
                 }
             }
+
+            label1.Text = symbolTyping.ToString();
+            label2.Text = symbolLabel.ToString();
         }
+
+        #endregion
     }
 }

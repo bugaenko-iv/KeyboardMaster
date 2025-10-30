@@ -33,13 +33,14 @@
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
             this.guna2Button1CollapseApll = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1ExitApll = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox1Typing = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1Text = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -101,37 +102,6 @@
             this.guna2Button1ExitApll.Text = "X";
             this.guna2Button1ExitApll.Click += new System.EventHandler(this.guna2Button1ExitApll_Click);
             // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Enabled = false;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(210, 70);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(37, 134);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(231, 80);
-            this.guna2ImageButton1.TabIndex = 3;
-            this.guna2ImageButton1.Visible = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(37, 49);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(184, 68);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
             // guna2TextBox1Typing
             // 
             this.guna2TextBox1Typing.BorderThickness = 0;
@@ -167,6 +137,40 @@
             this.label1Text.TabIndex = 6;
             this.label1Text.Text = "я проснулся утром и сразу почувствовал что сегодня что-то не так солнце светило";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(88, 409);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(88, 341);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "label2";
+            // 
+            // guna2PictureBox1Logo
+            // 
+            this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.ErrorImage = null;
+            this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
+            this.guna2PictureBox1Logo.ImageRotate = 0F;
+            this.guna2PictureBox1Logo.InitialImage = null;
+            this.guna2PictureBox1Logo.Location = new System.Drawing.Point(24, 49);
+            this.guna2PictureBox1Logo.Name = "guna2PictureBox1Logo";
+            this.guna2PictureBox1Logo.Size = new System.Drawing.Size(194, 75);
+            this.guna2PictureBox1Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1Logo.TabIndex = 0;
+            this.guna2PictureBox1Logo.TabStop = false;
+            this.guna2PictureBox1Logo.UseTransparentBackground = true;
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,10 +178,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.guna2PictureBox1Logo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label1Text);
             this.Controls.Add(this.guna2TextBox1Typing);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.panel1ControlForm1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -188,7 +193,7 @@
             this.Load += new System.EventHandler(this.Form1MainMenu_Load);
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,10 +205,11 @@
         private System.Windows.Forms.Panel panel1ForControlButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button1ExitApll;
         private Guna.UI2.WinForms.Guna2Button guna2Button1CollapseApll;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1Typing;
         private System.Windows.Forms.Label label1Text;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
     }
 }
 
