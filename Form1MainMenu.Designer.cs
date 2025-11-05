@@ -36,7 +36,6 @@
             this.guna2TextBox1Typing = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1Text = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
@@ -140,24 +139,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 409);
+            this.label1.Location = new System.Drawing.Point(248, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 341);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
+            this.label1.Text = "Кол-во ошибок";
             // 
             // guna2PictureBox1Logo
             // 
             this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2PictureBox1Logo.ErrorImage = null;
             this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
@@ -179,7 +170,6 @@
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
             this.Controls.Add(this.guna2PictureBox1Logo);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label1Text);
             this.Controls.Add(this.guna2TextBox1Typing);
@@ -208,7 +198,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1Typing;
         private System.Windows.Forms.Label label1Text;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
     }
 }

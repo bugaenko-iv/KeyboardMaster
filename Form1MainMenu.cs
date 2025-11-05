@@ -9,12 +9,11 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 {
     public partial class Form1MainMenu : Form
     {
-        bool isLeftMouseDown, isSymbolTrue;
+        bool isLeftMouseDown;
         Point startPoint;
         string labelText;
         string typingText;
-        char symbolLabel, symbolTyping;
-        int numberSymbol;
+        int countMistake = 0;
 
         public Form1MainMenu()
         {
@@ -102,7 +101,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Печать с клавиатуры 
+        #region Печать с клавиатуры и проверка
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -110,30 +109,16 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
             if (!string.IsNullOrEmpty(guna2TextBox1Typing.Text))
             {
-                for (int i = 0; i < typingText.Length; i++)
-                {
-                    symbolTyping = typingText[i];
-                    numberSymbol = i;
-                }
-
-                for (int i = numberSymbol; i < labelText.Length;)
-                {
-                    symbolLabel = labelText[i];
-                    break;
-                }
-
-                if (symbolTyping.ToString() == symbolLabel.ToString())
-                {
-                    guna2TextBox1Typing.ForeColor = Color.White;
-                }
-                else
-                {
-                    guna2TextBox1Typing.ForeColor = Color.Red;
+                for (int i = 0; i < typingText.Length; i++) 
+                { 
+                    if (typingText[i].ToString() != labelText[i].ToString())
+                    {
+                        countMistake++;
+                    }
                 }
             }
 
-            label1.Text = symbolTyping.ToString();
-            label2.Text = symbolLabel.ToString();
+            label1.Text = countMistake.ToString();
         }
 
         #endregion
