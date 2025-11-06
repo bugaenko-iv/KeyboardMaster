@@ -9,6 +9,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 {
     public partial class Form1MainMenu : Form
     {
+        //Form2Authorization form2Authorization = new Form2Authorization();
+
         bool isLeftMouseDown;
         Point startPoint;
         string labelText;
@@ -111,7 +113,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             {
                 for (int i = 0; i < typingText.Length; i++) 
                 { 
-                    if (typingText[i].ToString() != labelText[i].ToString())
+                    if (typingText[i].ToString() != labelText[i].ToString()) // System.IndexOutOfRangeException: "Индекс находился вне границ массива."
                     {
                         countMistake++;
                     }
@@ -122,5 +124,26 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         }
 
         #endregion
+
+
+        #region Изменение иконки пользователя     
+
+        private void guna2PictureBox1UserLogo_MouseEnter(object sender, EventArgs e)
+        {
+            guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_white;
+        }
+
+        private void guna2PictureBox1UserLogo_MouseLeave(object sender, EventArgs e)
+        {
+            guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_grey;
+        }
+
+        #endregion
+
+        private void guna2PictureBox1UserLogo_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //form2Authorization.Show();
+        }
     }
 }

@@ -36,9 +36,11 @@
             this.guna2TextBox1Typing = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1Text = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,10 +147,26 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Кол-во ошибок";
             // 
+            // guna2PictureBox1UserLogo
+            // 
+            this.guna2PictureBox1UserLogo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1UserLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1UserLogo.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.user_logo_grey;
+            this.guna2PictureBox1UserLogo.ImageRotate = 0F;
+            this.guna2PictureBox1UserLogo.Location = new System.Drawing.Point(1313, 83);
+            this.guna2PictureBox1UserLogo.Name = "guna2PictureBox1UserLogo";
+            this.guna2PictureBox1UserLogo.Size = new System.Drawing.Size(20, 22);
+            this.guna2PictureBox1UserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1UserLogo.TabIndex = 8;
+            this.guna2PictureBox1UserLogo.TabStop = false;
+            this.guna2PictureBox1UserLogo.Click += new System.EventHandler(this.guna2PictureBox1UserLogo_Click);
+            this.guna2PictureBox1UserLogo.MouseEnter += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseEnter);
+            this.guna2PictureBox1UserLogo.MouseLeave += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseLeave);
+            // 
             // guna2PictureBox1Logo
             // 
             this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2PictureBox1Logo.ErrorImage = null;
             this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
@@ -169,6 +187,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.guna2PictureBox1UserLogo);
             this.Controls.Add(this.guna2PictureBox1Logo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label1Text);
@@ -183,6 +202,7 @@
             this.Load += new System.EventHandler(this.Form1MainMenu_Load);
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,6 +219,7 @@
         private System.Windows.Forms.Label label1Text;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1UserLogo;
     }
 }
 
