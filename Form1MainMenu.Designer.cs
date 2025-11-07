@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
@@ -180,6 +181,15 @@
             this.guna2PictureBox1Logo.TabStop = false;
             this.guna2PictureBox1Logo.UseTransparentBackground = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(539, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Проверка копирования репозитория";
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +197,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2PictureBox1UserLogo);
             this.Controls.Add(this.guna2PictureBox1Logo);
             this.Controls.Add(this.label1);
@@ -220,6 +231,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1UserLogo;
+        private System.Windows.Forms.Label label2;
     }
 }
 
