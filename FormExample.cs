@@ -7,15 +7,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Клавиатурный_тренажер_KeyboardMaster
 {
-    public partial class Form1MainMenu : Form
+    public partial class FormExample : Form
     {
         bool isLeftMouseDown;
         Point startPoint;
-        string labelText;
-        string typingText;
-        int countMistake = 0;
 
-        public Form1MainMenu()
+        public FormExample()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
@@ -23,13 +20,6 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Activated += Form1MainMenu_Activated;
             this.Resize += Form1MainMenu_Resize;
             this.Size = new Size(1389, 795); // Установите фиксированный размер
-            guna2TextBox1Typing.Focus();
-        }
-
-        private void Form1MainMenu_Load(object sender, EventArgs e)
-        {
-            labelText = label1Text.Text;
-            this.ActiveControl = guna2TextBox1Typing;
         }
 
         #region Граница формы
@@ -100,49 +90,5 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
-
-        #region Печать с клавиатуры и проверка
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            typingText = guna2TextBox1Typing.Text;
-
-            if (!string.IsNullOrEmpty(guna2TextBox1Typing.Text))
-            {
-                for (int i = 0; i < typingText.Length; i++) 
-                { 
-                    if (typingText[i].ToString() != labelText[i].ToString()) // System.IndexOutOfRangeException: "Индекс находился вне границ массива."
-                    {
-                        countMistake++;
-                    }
-                }
-            }
-
-            label1.Text = countMistake.ToString();
-        }
-
-        #endregion
-
-
-        #region Изменение иконки пользователя     
-
-        private void guna2PictureBox1UserLogo_MouseEnter(object sender, EventArgs e)
-        {
-            guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_white;
-        }
-
-        private void guna2PictureBox1UserLogo_MouseLeave(object sender, EventArgs e)
-        {
-            guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_grey;
-        }
-
-        #endregion
-
-        private void guna2PictureBox1UserLogo_Click(object sender, EventArgs e)
-        {
-            Form2Authorization form2Authorization = new Form2Authorization();
-            this.Hide();
-            form2Authorization.Show();
-        }
     }
 }
