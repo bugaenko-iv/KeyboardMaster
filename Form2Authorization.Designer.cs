@@ -33,10 +33,18 @@
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
             this.guna2Button1CollapseApll = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1ExitApll = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1LoginAuth = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2PasswordAuth = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
+            this.label1TextAuthorization = new System.Windows.Forms.Label();
+            this.panel1ForAuth = new System.Windows.Forms.Panel();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
+            this.panel1ForAuth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -98,6 +106,97 @@
             this.guna2Button1ExitApll.Text = "X";
             this.guna2Button1ExitApll.Click += new System.EventHandler(this.guna2Button1ExitApll_Click);
             // 
+            // guna2TextBox1LoginAuth
+            // 
+            this.guna2TextBox1LoginAuth.Animated = true;
+            this.guna2TextBox1LoginAuth.BorderRadius = 12;
+            this.guna2TextBox1LoginAuth.BorderThickness = 0;
+            this.guna2TextBox1LoginAuth.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1LoginAuth.DefaultText = "";
+            this.guna2TextBox1LoginAuth.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1LoginAuth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1LoginAuth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1LoginAuth.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1LoginAuth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox1LoginAuth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1LoginAuth.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2TextBox1LoginAuth.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox1LoginAuth.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1LoginAuth.Location = new System.Drawing.Point(9, 57);
+            this.guna2TextBox1LoginAuth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox1LoginAuth.Name = "guna2TextBox1LoginAuth";
+            this.guna2TextBox1LoginAuth.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.guna2TextBox1LoginAuth.PlaceholderText = "Имя пользователя";
+            this.guna2TextBox1LoginAuth.SelectedText = "";
+            this.guna2TextBox1LoginAuth.Size = new System.Drawing.Size(285, 46);
+            this.guna2TextBox1LoginAuth.TabIndex = 2;
+            this.guna2TextBox1LoginAuth.TextChanged += new System.EventHandler(this.guna2TextBox1LoginAuth_TextChanged);
+            // 
+            // guna2TextBox2PasswordAuth
+            // 
+            this.guna2TextBox2PasswordAuth.Animated = true;
+            this.guna2TextBox2PasswordAuth.BorderRadius = 12;
+            this.guna2TextBox2PasswordAuth.BorderThickness = 0;
+            this.guna2TextBox2PasswordAuth.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2PasswordAuth.DefaultText = "";
+            this.guna2TextBox2PasswordAuth.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2PasswordAuth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2PasswordAuth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2PasswordAuth.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2PasswordAuth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox2PasswordAuth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2PasswordAuth.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2TextBox2PasswordAuth.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox2PasswordAuth.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2PasswordAuth.Location = new System.Drawing.Point(9, 119);
+            this.guna2TextBox2PasswordAuth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox2PasswordAuth.Name = "guna2TextBox2PasswordAuth";
+            this.guna2TextBox2PasswordAuth.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.guna2TextBox2PasswordAuth.PlaceholderText = "Пароль";
+            this.guna2TextBox2PasswordAuth.SelectedText = "";
+            this.guna2TextBox2PasswordAuth.Size = new System.Drawing.Size(285, 46);
+            this.guna2TextBox2PasswordAuth.TabIndex = 3;
+            this.guna2TextBox2PasswordAuth.TextChanged += new System.EventHandler(this.guna2TextBox2PasswordAuth_TextChanged);
+            // 
+            // guna2Button1Auth
+            // 
+            this.guna2Button1Auth.BorderRadius = 12;
+            this.guna2Button1Auth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1Auth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1Auth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1Auth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1Auth.Enabled = false;
+            this.guna2Button1Auth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Button1Auth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button1Auth.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1Auth.Location = new System.Drawing.Point(9, 207);
+            this.guna2Button1Auth.Name = "guna2Button1Auth";
+            this.guna2Button1Auth.Size = new System.Drawing.Size(285, 45);
+            this.guna2Button1Auth.TabIndex = 4;
+            this.guna2Button1Auth.Text = "Войти";
+            // 
+            // label1TextAuthorization
+            // 
+            this.label1TextAuthorization.AutoSize = true;
+            this.label1TextAuthorization.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1TextAuthorization.Location = new System.Drawing.Point(13, 0);
+            this.label1TextAuthorization.Name = "label1TextAuthorization";
+            this.label1TextAuthorization.Size = new System.Drawing.Size(178, 31);
+            this.label1TextAuthorization.TabIndex = 1;
+            this.label1TextAuthorization.Text = "Авторизация";
+            // 
+            // panel1ForAuth
+            // 
+            this.panel1ForAuth.Controls.Add(this.guna2PictureBox1);
+            this.panel1ForAuth.Controls.Add(this.label1TextAuthorization);
+            this.panel1ForAuth.Controls.Add(this.guna2Button1Auth);
+            this.panel1ForAuth.Controls.Add(this.guna2TextBox1LoginAuth);
+            this.panel1ForAuth.Controls.Add(this.guna2TextBox2PasswordAuth);
+            this.panel1ForAuth.Location = new System.Drawing.Point(548, 230);
+            this.panel1ForAuth.Name = "panel1ForAuth";
+            this.panel1ForAuth.Size = new System.Drawing.Size(371, 281);
+            this.panel1ForAuth.TabIndex = 5;
+            // 
             // guna2PictureBox1Logo
             // 
             this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
@@ -116,6 +215,19 @@
             this.guna2PictureBox1Logo.UseTransparentBackground = true;
             this.guna2PictureBox1Logo.Click += new System.EventHandler(this.guna2PictureBox1Logo_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.logo_visible_password;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(254, 134);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 16);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1.TabIndex = 6;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
             // Form2Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +235,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.panel1ForAuth);
             this.Controls.Add(this.guna2PictureBox1Logo);
             this.Controls.Add(this.panel1ControlForm1);
             this.ForeColor = System.Drawing.SystemColors.Control;
@@ -133,7 +246,10 @@
             this.Text = " ";
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
+            this.panel1ForAuth.ResumeLayout(false);
+            this.panel1ForAuth.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,6 +261,12 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1ExitApll;
         private Guna.UI2.WinForms.Guna2Button guna2Button1CollapseApll;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1LoginAuth;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2PasswordAuth;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1Auth;
+        private System.Windows.Forms.Label label1TextAuthorization;
+        private System.Windows.Forms.Panel panel1ForAuth;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

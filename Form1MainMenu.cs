@@ -138,11 +138,17 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
+
+        #region Переход на форму авторизации     
+
         private void guna2PictureBox1UserLogo_Click(object sender, EventArgs e)
         {
             Form2Authorization form2Authorization = new Form2Authorization();
             this.Hide();
             form2Authorization.Show();
         }
+
+        #endregion
+
     }
 }

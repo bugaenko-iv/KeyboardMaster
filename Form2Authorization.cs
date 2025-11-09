@@ -20,6 +20,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Activated += Form1MainMenu_Activated;
             this.Resize += Form1MainMenu_Resize;
             this.Size = new Size(1389, 795); // Установите фиксированный размер
+            guna2TextBox1LoginAuth.MaxLength = 25;
+            guna2TextBox2PasswordAuth.MaxLength = 25;
         }
 
         #region Граница формы
@@ -90,11 +92,40 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
+
+        #region Переход на главную форму
+
         private void guna2PictureBox1Logo_Click(object sender, EventArgs e)
         {
             Form1MainMenu form1MainMenu = new Form1MainMenu();
             this.Hide();
             form1MainMenu.Show();
+        }
+
+        #endregion
+
+        private void guna2TextBox1LoginAuth_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox1LoginAuth.Text) && !string.IsNullOrEmpty(guna2TextBox2PasswordAuth.Text))
+            {
+                guna2Button1Auth.Enabled = true;
+            }
+            else
+            {
+                guna2Button1Auth.Enabled = false;
+            }
+        }
+
+        private void guna2TextBox2PasswordAuth_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox1LoginAuth.Text) && !string.IsNullOrEmpty(guna2TextBox2PasswordAuth.Text))
+            {
+                guna2Button1Auth.Enabled = true;
+            }
+            else
+            {
+                guna2Button1Auth.Enabled = false;
+            }
         }
     }
 }
