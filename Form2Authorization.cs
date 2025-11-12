@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -22,6 +25,12 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Size = new Size(1389, 795); // Установите фиксированный размер
             guna2TextBox1LoginAuth.MaxLength = 25;
             guna2TextBox2PasswordAuth.MaxLength = 25;
+        }
+
+        private void Form2Authorization_Load(object sender, EventArgs e)
+        {
+            guna2PictureBox1HidePassword.Visible = false;
+            guna2PictureBox1HidePassword.Location = new Point(253, 133);
         }
 
         #region Граница формы
@@ -104,6 +113,9 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
+
+        #region Активация кнопки авторизации. Поля "имя пользователя и пароль"       
+
         private void guna2TextBox1LoginAuth_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(guna2TextBox1LoginAuth.Text) && !string.IsNullOrEmpty(guna2TextBox2PasswordAuth.Text))
@@ -127,5 +139,30 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 guna2Button1Auth.Enabled = false;
             }
         }
+
+        #endregion
+
+
+        #region Показать/Скрыть пароль
+
+        private void guna2PictureBox1ShowPassword_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox1ShowPassword.Visible = false;
+            guna2PictureBox1HidePassword.Visible = true;
+
+            guna2TextBox2PasswordAuth.UseSystemPasswordChar = false;
+        }
+
+        private void guna2PictureBox1HidePassword_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox1HidePassword.Visible = false;
+            guna2PictureBox1ShowPassword.Visible = true;
+
+            guna2TextBox2PasswordAuth.UseSystemPasswordChar = true;
+        }
+
+        #endregion
+
+
     }
 }

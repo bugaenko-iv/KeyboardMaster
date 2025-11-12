@@ -73,6 +73,16 @@ namespace Клавиатурный_тренажер_KeyboardMaster.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_notvisible_password {
+            get {
+                object obj = ResourceManager.GetObject("logo_notvisible_password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_visible_password {
             get {
                 object obj = ResourceManager.GetObject("logo_visible_password", resourceCulture);

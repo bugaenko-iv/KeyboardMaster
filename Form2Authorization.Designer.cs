@@ -38,13 +38,15 @@
             this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
             this.label1TextAuthorization = new System.Windows.Forms.Label();
             this.panel1ForAuth = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1HidePassword = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1ShowPassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.panel1ForAuth.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1HidePassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1ShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -156,6 +158,7 @@
             this.guna2TextBox2PasswordAuth.SelectedText = "";
             this.guna2TextBox2PasswordAuth.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox2PasswordAuth.TabIndex = 3;
+            this.guna2TextBox2PasswordAuth.UseSystemPasswordChar = true;
             this.guna2TextBox2PasswordAuth.TextChanged += new System.EventHandler(this.guna2TextBox2PasswordAuth_TextChanged);
             // 
             // guna2Button1Auth
@@ -187,15 +190,44 @@
             // 
             // panel1ForAuth
             // 
-            this.panel1ForAuth.Controls.Add(this.guna2PictureBox1);
+            this.panel1ForAuth.Controls.Add(this.guna2PictureBox1HidePassword);
+            this.panel1ForAuth.Controls.Add(this.guna2PictureBox1ShowPassword);
             this.panel1ForAuth.Controls.Add(this.label1TextAuthorization);
             this.panel1ForAuth.Controls.Add(this.guna2Button1Auth);
             this.panel1ForAuth.Controls.Add(this.guna2TextBox1LoginAuth);
             this.panel1ForAuth.Controls.Add(this.guna2TextBox2PasswordAuth);
-            this.panel1ForAuth.Location = new System.Drawing.Point(548, 230);
+            this.panel1ForAuth.Location = new System.Drawing.Point(102, 251);
             this.panel1ForAuth.Name = "panel1ForAuth";
             this.panel1ForAuth.Size = new System.Drawing.Size(371, 281);
             this.panel1ForAuth.TabIndex = 5;
+            // 
+            // guna2PictureBox1HidePassword
+            // 
+            this.guna2PictureBox1HidePassword.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1HidePassword.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.logo_notvisible_password;
+            this.guna2PictureBox1HidePassword.ImageRotate = 0F;
+            this.guna2PictureBox1HidePassword.Location = new System.Drawing.Point(300, 133);
+            this.guna2PictureBox1HidePassword.Name = "guna2PictureBox1HidePassword";
+            this.guna2PictureBox1HidePassword.Size = new System.Drawing.Size(28, 20);
+            this.guna2PictureBox1HidePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1HidePassword.TabIndex = 7;
+            this.guna2PictureBox1HidePassword.TabStop = false;
+            this.guna2PictureBox1HidePassword.UseTransparentBackground = true;
+            this.guna2PictureBox1HidePassword.Click += new System.EventHandler(this.guna2PictureBox1HidePassword_Click);
+            // 
+            // guna2PictureBox1ShowPassword
+            // 
+            this.guna2PictureBox1ShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1ShowPassword.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.logo_visible_password;
+            this.guna2PictureBox1ShowPassword.ImageRotate = 0F;
+            this.guna2PictureBox1ShowPassword.Location = new System.Drawing.Point(255, 135);
+            this.guna2PictureBox1ShowPassword.Name = "guna2PictureBox1ShowPassword";
+            this.guna2PictureBox1ShowPassword.Size = new System.Drawing.Size(24, 16);
+            this.guna2PictureBox1ShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1ShowPassword.TabIndex = 6;
+            this.guna2PictureBox1ShowPassword.TabStop = false;
+            this.guna2PictureBox1ShowPassword.UseTransparentBackground = true;
+            this.guna2PictureBox1ShowPassword.Click += new System.EventHandler(this.guna2PictureBox1ShowPassword_Click);
             // 
             // guna2PictureBox1Logo
             // 
@@ -215,19 +247,6 @@
             this.guna2PictureBox1Logo.UseTransparentBackground = true;
             this.guna2PictureBox1Logo.Click += new System.EventHandler(this.guna2PictureBox1Logo_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.logo_visible_password;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(254, 134);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 16);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1.TabIndex = 6;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
             // Form2Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,12 +263,14 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.Form2Authorization_Load);
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
             this.panel1ForAuth.ResumeLayout(false);
             this.panel1ForAuth.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1HidePassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1ShowPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,7 +287,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1Auth;
         private System.Windows.Forms.Label label1TextAuthorization;
         private System.Windows.Forms.Panel panel1ForAuth;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1ShowPassword;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1HidePassword;
     }
 }
 
