@@ -29,8 +29,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void Form2Authorization_Load(object sender, EventArgs e)
         {
-            guna2PictureBox1HidePassword.Visible = false;
-            guna2PictureBox1HidePassword.Location = new Point(253, 133);
+            guna2PictureBox1HidePassword.Location = new Point(253, 133); // Для авторизации
+            guna2PictureBox2HidePassword.Location = new Point(253, 133); // Для регистрации
         }
 
         #region Граница формы
@@ -143,7 +143,48 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Показать/Скрыть пароль
+        #region Активация кнопки регистрации. Поля "имя пользователя, пароль и ключевое слово "  
+
+        private void guna2TextBox3LoginRegistr_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox3LoginRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox4PasswordRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox5KeywordRegistr.Text))
+            {
+                guna2Button2Registr.Enabled = true;
+            }
+            else
+            {
+                guna2Button2Registr.Enabled = false;
+            }
+        }
+
+        private void guna2TextBox4PasswordRegistr_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox3LoginRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox4PasswordRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox5KeywordRegistr.Text))
+            {
+                guna2Button2Registr.Enabled = true;
+            }
+            else
+            {
+                guna2Button2Registr.Enabled = false;
+            }
+        }
+
+        private void guna2TextBox5KeywordRegistr_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox3LoginRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox4PasswordRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox5KeywordRegistr.Text))
+            {
+                guna2Button2Registr.Enabled = true;
+            }
+            else
+            {
+                guna2Button2Registr.Enabled = false;
+            }
+        }
+
+        #endregion
+
+
+        #region Показать/Скрыть пароль для авторизации  
 
         private void guna2PictureBox1ShowPassword_Click(object sender, EventArgs e)
         {
@@ -161,8 +202,29 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             guna2TextBox2PasswordAuth.UseSystemPasswordChar = true;
         }
 
+
         #endregion
 
+
+        #region Показать/Скрыть пароль для регистрации      
+
+        private void guna2PictureBox2ShowPassword_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox2ShowPassword.Visible = false;
+            guna2PictureBox2HidePassword.Visible = true;
+
+            guna2TextBox4PasswordRegistr.UseSystemPasswordChar = false;
+        }
+
+        private void guna2PictureBox2HidePassword_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox2HidePassword.Visible = false;
+            guna2PictureBox2ShowPassword.Visible = true;
+
+            guna2TextBox4PasswordRegistr.UseSystemPasswordChar = true;
+        }
+
+        #endregion
 
     }
 }
