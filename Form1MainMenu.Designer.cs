@@ -122,7 +122,7 @@
             this.guna2TextBox1Typing.Name = "guna2TextBox1Typing";
             this.guna2TextBox1Typing.PlaceholderText = "";
             this.guna2TextBox1Typing.SelectedText = "";
-            this.guna2TextBox1Typing.Size = new System.Drawing.Size(976, 60);
+            this.guna2TextBox1Typing.Size = new System.Drawing.Size(990, 74);
             this.guna2TextBox1Typing.TabIndex = 5;
             this.guna2TextBox1Typing.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 

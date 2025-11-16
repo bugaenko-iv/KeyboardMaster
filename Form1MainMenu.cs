@@ -13,7 +13,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         Point startPoint;
         string labelText;
         string typingText;
-        int countMistake = 0;
+        int countMistake = 0; // Кол-во ошибок в тексе при печатании
 
         public Form1MainMenu()
         {
@@ -24,6 +24,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Resize += Form1MainMenu_Resize;
             this.Size = new Size(1389, 795); // Установите фиксированный размер
             guna2TextBox1Typing.Focus();
+            guna2TextBox1Typing.MaxLength = label1Text.Text.Length;
         }
 
         private void Form1MainMenu_Load(object sender, EventArgs e)
@@ -111,14 +112,12 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             {
                 for (int i = 0; i < typingText.Length; i++) 
                 { 
-                    if (typingText[i].ToString() != labelText[i].ToString()) // System.IndexOutOfRangeException: "Индекс находился вне границ массива."
+                    if (typingText[i].ToString() != labelText[i].ToString())
                     {
                         countMistake++;
                     }
                 }
             }
-
-            label1.Text = countMistake.ToString();
         }
 
         #endregion
@@ -149,6 +148,5 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         }
 
         #endregion
-
     }
 }
