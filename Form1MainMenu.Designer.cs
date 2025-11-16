@@ -117,7 +117,7 @@
             this.guna2TextBox1Typing.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2TextBox1Typing.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox1Typing.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1Typing.Location = new System.Drawing.Point(251, 385);
+            this.guna2TextBox1Typing.Location = new System.Drawing.Point(194, 413);
             this.guna2TextBox1Typing.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox1Typing.Name = "guna2TextBox1Typing";
             this.guna2TextBox1Typing.PlaceholderText = "";
@@ -132,7 +132,7 @@
             this.label1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1Text.ForeColor = System.Drawing.Color.DarkGray;
             this.label1Text.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1Text.Location = new System.Drawing.Point(255, 329);
+            this.label1Text.Location = new System.Drawing.Point(198, 357);
             this.label1Text.Name = "label1Text";
             this.label1Text.Size = new System.Drawing.Size(981, 29);
             this.label1Text.TabIndex = 6;
@@ -141,7 +141,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(248, 252);
+            this.label1.Location = new System.Drawing.Point(191, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 7;

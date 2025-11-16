@@ -34,6 +34,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             guna2PictureBox1HidePassword.Location = new Point(253, 133); // Для авторизации
             guna2PictureBox2HidePassword.Location = new Point(253, 133); // Для регистрации
+            panel2ForRegistr.Location = new Point(526, 228); // Для панели регистрации
+            panel3ForRestorePassword.Location = new Point(526, 228); // Для панели восстановления пароля
         }
 
         #region Граница формы
@@ -298,5 +300,80 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         }
 
         #endregion
+
+
+        #region Смена панелей авторизации, регистрации и восстановления пароля
+
+        private void label1RestorePassword_Click(object sender, EventArgs e)
+        {
+            panel1ForAuth.Visible = false;
+            panel3ForRestorePassword.Visible = true;
+        }
+
+        private void label1CreateNewAcc_Click(object sender, EventArgs e)
+        {
+            panel1ForAuth.Visible = false;
+            panel2ForRegistr.Visible = true;
+        }
+
+        private void label1EnterInAcc_Click(object sender, EventArgs e)
+        {
+            panel2ForRegistr.Visible = false;
+            panel1ForAuth.Visible = true;
+        }
+
+        private void label2EnterInAcc_Click(object sender, EventArgs e)
+        {
+            panel3ForRestorePassword.Visible = false;
+            panel1ForAuth.Visible = true;
+        }
+
+        #endregion
+
+
+        #region Анимация label при навидении мышью
+
+        private void label1RestorePassword_MouseEnter(object sender, EventArgs e)
+        {
+            label1RestorePassword.ForeColor = Color.White;
+        }
+
+        private void label1RestorePassword_MouseLeave(object sender, EventArgs e)
+        {
+            label1RestorePassword.ForeColor = Color.DarkGray;
+        }
+
+        private void label1CreateNewAcc_MouseEnter(object sender, EventArgs e)
+        {
+            label1CreateNewAcc.ForeColor = Color.White;
+        }
+
+        private void label1CreateNewAcc_MouseLeave(object sender, EventArgs e)
+        {
+            label1CreateNewAcc.ForeColor = Color.DarkGray;
+        }
+
+        private void label1EnterInAcc_MouseEnter(object sender, EventArgs e)
+        {
+            label1EnterInAcc.ForeColor = Color.White;
+        }
+
+        private void label1EnterInAcc_MouseLeave(object sender, EventArgs e)
+        {
+            label1EnterInAcc.ForeColor = Color.DarkGray;
+        }
+
+        private void label2EnterInAcc_MouseEnter(object sender, EventArgs e)
+        {
+            label2EnterInAcc.ForeColor = Color.White;
+        }
+
+        private void label2EnterInAcc_MouseLeave(object sender, EventArgs e)
+        {
+            label2EnterInAcc.ForeColor = Color.DarkGray;
+        }
+
+        #endregion
+
     }
 }
