@@ -53,12 +53,10 @@
             this.label1CreateNewAcc = new System.Windows.Forms.Label();
             this.label1EnterInAcc = new System.Windows.Forms.Label();
             this.panel3ForRestorePassword = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1TextRestore = new System.Windows.Forms.Label();
+            this.guna2Button3Restore = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox6LoginRestore = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox7KeywordRestore = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2EnterInAcc = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
@@ -70,8 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2HidePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2ShowPassword)).BeginInit();
             this.panel3ForRestorePassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -478,124 +474,95 @@
             // panel3ForRestorePassword
             // 
             this.panel3ForRestorePassword.Controls.Add(this.label2EnterInAcc);
-            this.panel3ForRestorePassword.Controls.Add(this.guna2PictureBox1);
-            this.panel3ForRestorePassword.Controls.Add(this.guna2PictureBox2);
-            this.panel3ForRestorePassword.Controls.Add(this.label3);
-            this.panel3ForRestorePassword.Controls.Add(this.guna2Button1);
-            this.panel3ForRestorePassword.Controls.Add(this.guna2TextBox1);
-            this.panel3ForRestorePassword.Controls.Add(this.guna2TextBox2);
+            this.panel3ForRestorePassword.Controls.Add(this.label1TextRestore);
+            this.panel3ForRestorePassword.Controls.Add(this.guna2Button3Restore);
+            this.panel3ForRestorePassword.Controls.Add(this.guna2TextBox6LoginRestore);
+            this.panel3ForRestorePassword.Controls.Add(this.guna2TextBox7KeywordRestore);
             this.panel3ForRestorePassword.Location = new System.Drawing.Point(77, 228);
             this.panel3ForRestorePassword.Name = "panel3ForRestorePassword";
             this.panel3ForRestorePassword.Size = new System.Drawing.Size(371, 352);
             this.panel3ForRestorePassword.TabIndex = 10;
             this.panel3ForRestorePassword.Visible = false;
             // 
-            // guna2PictureBox1
+            // label1TextRestore
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.logo_notvisible_password;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(300, 133);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 20);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 7;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            this.guna2PictureBox1.Visible = false;
+            this.label1TextRestore.AutoSize = true;
+            this.label1TextRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1TextRestore.Location = new System.Drawing.Point(13, 0);
+            this.label1TextRestore.Name = "label1TextRestore";
+            this.label1TextRestore.Size = new System.Drawing.Size(221, 31);
+            this.label1TextRestore.TabIndex = 1;
+            this.label1TextRestore.Text = "Восстановление";
             // 
-            // guna2PictureBox2
+            // guna2Button3Restore
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.logo_visible_password;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(255, 135);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(24, 16);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 6;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
+            this.guna2Button3Restore.BorderRadius = 12;
+            this.guna2Button3Restore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3Restore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3Restore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3Restore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3Restore.Enabled = false;
+            this.guna2Button3Restore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Button3Restore.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2Button3Restore.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3Restore.Location = new System.Drawing.Point(9, 207);
+            this.guna2Button3Restore.Name = "guna2Button3Restore";
+            this.guna2Button3Restore.Size = new System.Drawing.Size(285, 45);
+            this.guna2Button3Restore.TabIndex = 4;
+            this.guna2Button3Restore.Text = "Восстановить пароль";
             // 
-            // label3
+            // guna2TextBox6LoginRestore
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(13, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Восстановление";
+            this.guna2TextBox6LoginRestore.Animated = true;
+            this.guna2TextBox6LoginRestore.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox6LoginRestore.BorderRadius = 12;
+            this.guna2TextBox6LoginRestore.BorderThickness = 2;
+            this.guna2TextBox6LoginRestore.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox6LoginRestore.DefaultText = "";
+            this.guna2TextBox6LoginRestore.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox6LoginRestore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox6LoginRestore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6LoginRestore.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6LoginRestore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox6LoginRestore.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2TextBox6LoginRestore.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2TextBox6LoginRestore.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox6LoginRestore.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox6LoginRestore.Location = new System.Drawing.Point(9, 57);
+            this.guna2TextBox6LoginRestore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox6LoginRestore.Name = "guna2TextBox6LoginRestore";
+            this.guna2TextBox6LoginRestore.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.guna2TextBox6LoginRestore.PlaceholderText = "Имя пользователя";
+            this.guna2TextBox6LoginRestore.SelectedText = "";
+            this.guna2TextBox6LoginRestore.Size = new System.Drawing.Size(285, 46);
+            this.guna2TextBox6LoginRestore.TabIndex = 2;
             // 
-            // guna2Button1
+            // guna2TextBox7KeywordRestore
             // 
-            this.guna2Button1.BorderRadius = 12;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Enabled = false;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(9, 207);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(285, 45);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Восстановить пароль";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2TextBox1.BorderRadius = 12;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.Location = new System.Drawing.Point(9, 57);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.PlaceholderText = "Имя пользователя";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox1.TabIndex = 2;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2TextBox2.BorderRadius = 12;
-            this.guna2TextBox2.BorderThickness = 2;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.Location = new System.Drawing.Point(9, 119);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox2.PlaceholderText = "Ключевое слово";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox2.TabIndex = 3;
-            this.guna2TextBox2.UseSystemPasswordChar = true;
+            this.guna2TextBox7KeywordRestore.Animated = true;
+            this.guna2TextBox7KeywordRestore.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox7KeywordRestore.BorderRadius = 12;
+            this.guna2TextBox7KeywordRestore.BorderThickness = 2;
+            this.guna2TextBox7KeywordRestore.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox7KeywordRestore.DefaultText = "";
+            this.guna2TextBox7KeywordRestore.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox7KeywordRestore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox7KeywordRestore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7KeywordRestore.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7KeywordRestore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox7KeywordRestore.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2TextBox7KeywordRestore.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2TextBox7KeywordRestore.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox7KeywordRestore.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox7KeywordRestore.Location = new System.Drawing.Point(9, 119);
+            this.guna2TextBox7KeywordRestore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox7KeywordRestore.Name = "guna2TextBox7KeywordRestore";
+            this.guna2TextBox7KeywordRestore.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.guna2TextBox7KeywordRestore.PlaceholderText = "Ключевое слово";
+            this.guna2TextBox7KeywordRestore.SelectedText = "";
+            this.guna2TextBox7KeywordRestore.Size = new System.Drawing.Size(285, 46);
+            this.guna2TextBox7KeywordRestore.TabIndex = 3;
+            this.guna2TextBox7KeywordRestore.UseSystemPasswordChar = true;
             // 
             // label2EnterInAcc
             // 
@@ -643,8 +610,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2ShowPassword)).EndInit();
             this.panel3ForRestorePassword.ResumeLayout(false);
             this.panel3ForRestorePassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -676,12 +641,10 @@
         private System.Windows.Forms.Label label1EnterInAcc;
         private System.Windows.Forms.Panel panel3ForRestorePassword;
         private System.Windows.Forms.Label label2EnterInAcc;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private System.Windows.Forms.Label label1TextRestore;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3Restore;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6LoginRestore;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7KeywordRestore;
     }
 }
 
