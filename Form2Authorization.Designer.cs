@@ -42,13 +42,13 @@
             this.guna2PictureBox1ShowPassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel2ForRegistr = new System.Windows.Forms.Panel();
+            this.guna2TextBox5KeywordRegistr = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox2HidePassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2ShowPassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1TextRegistration = new System.Windows.Forms.Label();
             this.guna2Button2Registr = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3LoginRegistr = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4PasswordRegistr = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5KeywordRegistr = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.panel1ForAuth.SuspendLayout();
@@ -188,6 +188,7 @@
             this.guna2Button1Auth.Size = new System.Drawing.Size(285, 45);
             this.guna2Button1Auth.TabIndex = 4;
             this.guna2Button1Auth.Text = "Войти";
+            this.guna2Button1Auth.Click += new System.EventHandler(this.guna2Button1Auth_Click);
             // 
             // label1TextAuthorization
             // 
@@ -273,6 +274,32 @@
             this.panel2ForRegistr.Size = new System.Drawing.Size(371, 352);
             this.panel2ForRegistr.TabIndex = 8;
             // 
+            // guna2TextBox5KeywordRegistr
+            // 
+            this.guna2TextBox5KeywordRegistr.Animated = true;
+            this.guna2TextBox5KeywordRegistr.BorderRadius = 12;
+            this.guna2TextBox5KeywordRegistr.BorderThickness = 0;
+            this.guna2TextBox5KeywordRegistr.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox5KeywordRegistr.DefaultText = "";
+            this.guna2TextBox5KeywordRegistr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox5KeywordRegistr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox5KeywordRegistr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5KeywordRegistr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5KeywordRegistr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2TextBox5KeywordRegistr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5KeywordRegistr.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2TextBox5KeywordRegistr.ForeColor = System.Drawing.Color.White;
+            this.guna2TextBox5KeywordRegistr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5KeywordRegistr.Location = new System.Drawing.Point(9, 182);
+            this.guna2TextBox5KeywordRegistr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox5KeywordRegistr.Name = "guna2TextBox5KeywordRegistr";
+            this.guna2TextBox5KeywordRegistr.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.guna2TextBox5KeywordRegistr.PlaceholderText = "Ключевое слово";
+            this.guna2TextBox5KeywordRegistr.SelectedText = "";
+            this.guna2TextBox5KeywordRegistr.Size = new System.Drawing.Size(285, 46);
+            this.guna2TextBox5KeywordRegistr.TabIndex = 8;
+            this.guna2TextBox5KeywordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox5KeywordRegistr_TextChanged);
+            // 
             // guna2PictureBox2HidePassword
             // 
             this.guna2PictureBox2HidePassword.BackColor = System.Drawing.Color.Transparent;
@@ -328,6 +355,7 @@
             this.guna2Button2Registr.Size = new System.Drawing.Size(285, 45);
             this.guna2Button2Registr.TabIndex = 4;
             this.guna2Button2Registr.Text = "Создать аккаунт";
+            this.guna2Button2Registr.Click += new System.EventHandler(this.guna2Button2Registr_Click);
             // 
             // guna2TextBox3LoginRegistr
             // 
@@ -381,32 +409,6 @@
             this.guna2TextBox4PasswordRegistr.TabIndex = 3;
             this.guna2TextBox4PasswordRegistr.UseSystemPasswordChar = true;
             this.guna2TextBox4PasswordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox4PasswordRegistr_TextChanged);
-            // 
-            // guna2TextBox5KeywordRegistr
-            // 
-            this.guna2TextBox5KeywordRegistr.Animated = true;
-            this.guna2TextBox5KeywordRegistr.BorderRadius = 12;
-            this.guna2TextBox5KeywordRegistr.BorderThickness = 0;
-            this.guna2TextBox5KeywordRegistr.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5KeywordRegistr.DefaultText = "";
-            this.guna2TextBox5KeywordRegistr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5KeywordRegistr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5KeywordRegistr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5KeywordRegistr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5KeywordRegistr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2TextBox5KeywordRegistr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5KeywordRegistr.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox5KeywordRegistr.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox5KeywordRegistr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5KeywordRegistr.Location = new System.Drawing.Point(9, 182);
-            this.guna2TextBox5KeywordRegistr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox5KeywordRegistr.Name = "guna2TextBox5KeywordRegistr";
-            this.guna2TextBox5KeywordRegistr.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox5KeywordRegistr.PlaceholderText = "Ключевое слово";
-            this.guna2TextBox5KeywordRegistr.SelectedText = "";
-            this.guna2TextBox5KeywordRegistr.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox5KeywordRegistr.TabIndex = 8;
-            this.guna2TextBox5KeywordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox5KeywordRegistr_TextChanged);
             // 
             // Form2Authorization
             // 

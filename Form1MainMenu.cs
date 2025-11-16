@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Web.UI.WebControls;
@@ -138,13 +139,27 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Переход на форму авторизации     
+        #region Подключение к бд и переход на форму авторизации     
 
         private void guna2PictureBox1UserLogo_Click(object sender, EventArgs e)
         {
-            Form2Authorization form2Authorization = new Form2Authorization();
-            this.Hide();
-            form2Authorization.Show();
+            string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    Form2Authorization form2Authorization = new Form2Authorization();
+                    this.Hide();
+                    form2Authorization.Show();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Ошибка подключения к базе данных: " + ex.Message);
+                }
+            }
         }
 
         #endregion

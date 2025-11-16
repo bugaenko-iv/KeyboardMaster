@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 {
     public partial class Form2Authorization : Form
     {
+        string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
+
         bool isLeftMouseDown;
         Point startPoint;
 
@@ -226,5 +229,74 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
+
+        #region Регистрация нового пользователя
+
+        private void guna2Button2Registr_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string addNewUserQuery = "insert into users (login, password, keyword) values (@login, @password, @keyword)";
+                    MySqlCommand commandAddNewUser = new MySqlCommand(addNewUserQuery, connection);
+                    commandAddNewUser.Parameters.AddWithValue("@login", guna2TextBox3LoginRegistr.Text);
+                    commandAddNewUser.Parameters.AddWithValue("@password", guna2TextBox4PasswordRegistr.Text);
+                    commandAddNewUser.Parameters.AddWithValue("@keyword", guna2TextBox5KeywordRegistr.Text);
+                    commandAddNewUser.ExecuteNonQuery();
+                    MessageBox.Show("Регистрация прошла успешно");
+
+                    Form1MainMenu form1MainMenu = new Form1MainMenu();
+                    this.Hide();
+                    form1MainMenu.Show();
+                }
+                catch (Exception ex) 
+                {
+                    MessageBox.Show("Ошибка при создании нового пользователя: " + ex.Message);
+                }
+            }
+        }
+
+        #endregion
+
+
+        #region Авторизация пользователя
+
+        private void guna2Button1Auth_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string lookForUserQuery = "select login, password from users where login = @login and password = @password";
+                MySqlCommand commandLookForUser = new MySqlCommand(lookForUserQuery, connection);
+                commandLookForUser.Parameters.AddWithValue("@login", guna2TextBox1LoginAuth.Text);
+                commandLookForUser.Parameters.AddWithValue("@password", guna2TextBox2PasswordAuth.Text);
+                object dataFromBDuser = commandLookForUser.ExecuteScalar();
+
+                string lookForAdminQuery = "select login, password from admin where login = @login and password = @password";
+                MySqlCommand commandlookForAdmin = new MySqlCommand(lookForAdminQuery, connection);
+                commandlookForAdmin.Parameters.AddWithValue("@login", guna2TextBox1LoginAuth.Text);
+                commandlookForAdmin.Parameters.AddWithValue("@password", guna2TextBox2PasswordAuth.Text);
+                object dataFromBDadmin = commandlookForAdmin.ExecuteScalar();
+
+                if (dataFromBDuser != null)
+                {
+                    MessageBox.Show("Авторизация прошла успешно");
+                }
+                else if (dataFromBDadmin != null)
+                {
+                    MessageBox.Show("Режим аминистратор");
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка, данных не существует");
+                }
+            }
+        }
+
+        #endregion
     }
 }
