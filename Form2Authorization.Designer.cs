@@ -38,10 +38,13 @@
             this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
             this.label1TextAuthorization = new System.Windows.Forms.Label();
             this.panel1ForAuth = new System.Windows.Forms.Panel();
+            this.label1CreateNewAcc = new System.Windows.Forms.Label();
+            this.label1RestorePassword = new System.Windows.Forms.Label();
             this.guna2PictureBox1HidePassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1ShowPassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel2ForRegistr = new System.Windows.Forms.Panel();
+            this.label1EnterInAcc = new System.Windows.Forms.Label();
             this.guna2TextBox5KeywordRegistr = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox2HidePassword = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2ShowPassword = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -49,15 +52,12 @@
             this.guna2Button2Registr = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3LoginRegistr = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4PasswordRegistr = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1RestorePassword = new System.Windows.Forms.Label();
-            this.label1CreateNewAcc = new System.Windows.Forms.Label();
-            this.label1EnterInAcc = new System.Windows.Forms.Label();
             this.panel3ForRestorePassword = new System.Windows.Forms.Panel();
+            this.label2EnterInAcc = new System.Windows.Forms.Label();
             this.label1TextRestore = new System.Windows.Forms.Label();
             this.guna2Button3Restore = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox6LoginRestore = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox7KeywordRestore = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2EnterInAcc = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.panel1ForAuth.SuspendLayout();
@@ -227,6 +227,34 @@
             this.panel1ForAuth.Size = new System.Drawing.Size(371, 352);
             this.panel1ForAuth.TabIndex = 5;
             // 
+            // label1CreateNewAcc
+            // 
+            this.label1CreateNewAcc.AutoSize = true;
+            this.label1CreateNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1CreateNewAcc.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1CreateNewAcc.Location = new System.Drawing.Point(72, 301);
+            this.label1CreateNewAcc.Name = "label1CreateNewAcc";
+            this.label1CreateNewAcc.Size = new System.Drawing.Size(174, 18);
+            this.label1CreateNewAcc.TabIndex = 9;
+            this.label1CreateNewAcc.Text = "Создать новый аккаунт";
+            this.label1CreateNewAcc.Click += new System.EventHandler(this.label1CreateNewAcc_Click);
+            this.label1CreateNewAcc.MouseEnter += new System.EventHandler(this.label1CreateNewAcc_MouseEnter);
+            this.label1CreateNewAcc.MouseLeave += new System.EventHandler(this.label1CreateNewAcc_MouseLeave);
+            // 
+            // label1RestorePassword
+            // 
+            this.label1RestorePassword.AutoSize = true;
+            this.label1RestorePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1RestorePassword.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1RestorePassword.Location = new System.Drawing.Point(95, 270);
+            this.label1RestorePassword.Name = "label1RestorePassword";
+            this.label1RestorePassword.Size = new System.Drawing.Size(125, 18);
+            this.label1RestorePassword.TabIndex = 8;
+            this.label1RestorePassword.Text = "Забыли пароль?";
+            this.label1RestorePassword.Click += new System.EventHandler(this.label1RestorePassword_Click);
+            this.label1RestorePassword.MouseEnter += new System.EventHandler(this.label1RestorePassword_MouseEnter);
+            this.label1RestorePassword.MouseLeave += new System.EventHandler(this.label1RestorePassword_MouseLeave);
+            // 
             // guna2PictureBox1HidePassword
             // 
             this.guna2PictureBox1HidePassword.BackColor = System.Drawing.Color.Transparent;
@@ -289,6 +317,20 @@
             this.panel2ForRegistr.Size = new System.Drawing.Size(371, 384);
             this.panel2ForRegistr.TabIndex = 8;
             this.panel2ForRegistr.Visible = false;
+            // 
+            // label1EnterInAcc
+            // 
+            this.label1EnterInAcc.AutoSize = true;
+            this.label1EnterInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1EnterInAcc.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1EnterInAcc.Location = new System.Drawing.Point(93, 334);
+            this.label1EnterInAcc.Name = "label1EnterInAcc";
+            this.label1EnterInAcc.Size = new System.Drawing.Size(120, 18);
+            this.label1EnterInAcc.TabIndex = 10;
+            this.label1EnterInAcc.Text = "Войти в аккаунт";
+            this.label1EnterInAcc.Click += new System.EventHandler(this.label1EnterInAcc_Click);
+            this.label1EnterInAcc.MouseEnter += new System.EventHandler(this.label1EnterInAcc_MouseEnter);
+            this.label1EnterInAcc.MouseLeave += new System.EventHandler(this.label1EnterInAcc_MouseLeave);
             // 
             // guna2TextBox5KeywordRegistr
             // 
@@ -429,48 +471,6 @@
             this.guna2TextBox4PasswordRegistr.UseSystemPasswordChar = true;
             this.guna2TextBox4PasswordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox4PasswordRegistr_TextChanged);
             // 
-            // label1RestorePassword
-            // 
-            this.label1RestorePassword.AutoSize = true;
-            this.label1RestorePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1RestorePassword.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1RestorePassword.Location = new System.Drawing.Point(95, 270);
-            this.label1RestorePassword.Name = "label1RestorePassword";
-            this.label1RestorePassword.Size = new System.Drawing.Size(125, 18);
-            this.label1RestorePassword.TabIndex = 8;
-            this.label1RestorePassword.Text = "Забыли пароль?";
-            this.label1RestorePassword.Click += new System.EventHandler(this.label1RestorePassword_Click);
-            this.label1RestorePassword.MouseEnter += new System.EventHandler(this.label1RestorePassword_MouseEnter);
-            this.label1RestorePassword.MouseLeave += new System.EventHandler(this.label1RestorePassword_MouseLeave);
-            // 
-            // label1CreateNewAcc
-            // 
-            this.label1CreateNewAcc.AutoSize = true;
-            this.label1CreateNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1CreateNewAcc.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1CreateNewAcc.Location = new System.Drawing.Point(72, 301);
-            this.label1CreateNewAcc.Name = "label1CreateNewAcc";
-            this.label1CreateNewAcc.Size = new System.Drawing.Size(174, 18);
-            this.label1CreateNewAcc.TabIndex = 9;
-            this.label1CreateNewAcc.Text = "Создать новый аккаунт";
-            this.label1CreateNewAcc.Click += new System.EventHandler(this.label1CreateNewAcc_Click);
-            this.label1CreateNewAcc.MouseEnter += new System.EventHandler(this.label1CreateNewAcc_MouseEnter);
-            this.label1CreateNewAcc.MouseLeave += new System.EventHandler(this.label1CreateNewAcc_MouseLeave);
-            // 
-            // label1EnterInAcc
-            // 
-            this.label1EnterInAcc.AutoSize = true;
-            this.label1EnterInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1EnterInAcc.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1EnterInAcc.Location = new System.Drawing.Point(93, 334);
-            this.label1EnterInAcc.Name = "label1EnterInAcc";
-            this.label1EnterInAcc.Size = new System.Drawing.Size(120, 18);
-            this.label1EnterInAcc.TabIndex = 10;
-            this.label1EnterInAcc.Text = "Войти в аккаунт";
-            this.label1EnterInAcc.Click += new System.EventHandler(this.label1EnterInAcc_Click);
-            this.label1EnterInAcc.MouseEnter += new System.EventHandler(this.label1EnterInAcc_MouseEnter);
-            this.label1EnterInAcc.MouseLeave += new System.EventHandler(this.label1EnterInAcc_MouseLeave);
-            // 
             // panel3ForRestorePassword
             // 
             this.panel3ForRestorePassword.Controls.Add(this.label2EnterInAcc);
@@ -483,6 +483,20 @@
             this.panel3ForRestorePassword.Size = new System.Drawing.Size(371, 352);
             this.panel3ForRestorePassword.TabIndex = 10;
             this.panel3ForRestorePassword.Visible = false;
+            // 
+            // label2EnterInAcc
+            // 
+            this.label2EnterInAcc.AutoSize = true;
+            this.label2EnterInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2EnterInAcc.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2EnterInAcc.Location = new System.Drawing.Point(93, 270);
+            this.label2EnterInAcc.Name = "label2EnterInAcc";
+            this.label2EnterInAcc.Size = new System.Drawing.Size(120, 18);
+            this.label2EnterInAcc.TabIndex = 11;
+            this.label2EnterInAcc.Text = "Войти в аккаунт";
+            this.label2EnterInAcc.Click += new System.EventHandler(this.label2EnterInAcc_Click);
+            this.label2EnterInAcc.MouseEnter += new System.EventHandler(this.label2EnterInAcc_MouseEnter);
+            this.label2EnterInAcc.MouseLeave += new System.EventHandler(this.label2EnterInAcc_MouseLeave);
             // 
             // label1TextRestore
             // 
@@ -510,6 +524,7 @@
             this.guna2Button3Restore.Size = new System.Drawing.Size(285, 45);
             this.guna2Button3Restore.TabIndex = 4;
             this.guna2Button3Restore.Text = "Восстановить пароль";
+            this.guna2Button3Restore.Click += new System.EventHandler(this.guna2Button3Restore_Click);
             // 
             // guna2TextBox6LoginRestore
             // 
@@ -536,6 +551,7 @@
             this.guna2TextBox6LoginRestore.SelectedText = "";
             this.guna2TextBox6LoginRestore.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox6LoginRestore.TabIndex = 2;
+            this.guna2TextBox6LoginRestore.TextChanged += new System.EventHandler(this.guna2TextBox6LoginRestore_TextChanged);
             // 
             // guna2TextBox7KeywordRestore
             // 
@@ -562,21 +578,7 @@
             this.guna2TextBox7KeywordRestore.SelectedText = "";
             this.guna2TextBox7KeywordRestore.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox7KeywordRestore.TabIndex = 3;
-            this.guna2TextBox7KeywordRestore.UseSystemPasswordChar = true;
-            // 
-            // label2EnterInAcc
-            // 
-            this.label2EnterInAcc.AutoSize = true;
-            this.label2EnterInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2EnterInAcc.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2EnterInAcc.Location = new System.Drawing.Point(93, 270);
-            this.label2EnterInAcc.Name = "label2EnterInAcc";
-            this.label2EnterInAcc.Size = new System.Drawing.Size(120, 18);
-            this.label2EnterInAcc.TabIndex = 11;
-            this.label2EnterInAcc.Text = "Войти в аккаунт";
-            this.label2EnterInAcc.Click += new System.EventHandler(this.label2EnterInAcc_Click);
-            this.label2EnterInAcc.MouseEnter += new System.EventHandler(this.label2EnterInAcc_MouseEnter);
-            this.label2EnterInAcc.MouseLeave += new System.EventHandler(this.label2EnterInAcc_MouseLeave);
+            this.guna2TextBox7KeywordRestore.TextChanged += new System.EventHandler(this.guna2TextBox7KeywordRestore_TextChanged);
             // 
             // Form2Authorization
             // 

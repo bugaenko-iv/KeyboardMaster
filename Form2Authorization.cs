@@ -189,6 +189,35 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
+        #region Активация кнопки восстановления пароля. Поля "имя пользователя и ключевое слово"
+
+        private void guna2TextBox6LoginRestore_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox6LoginRestore.Text) && !string.IsNullOrEmpty(guna2TextBox7KeywordRestore.Text))
+            {
+                guna2Button3Restore.Enabled = true;
+            }
+            else
+            {
+                guna2Button3Restore.Enabled = false;
+            }
+        }
+
+        private void guna2TextBox7KeywordRestore_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(guna2TextBox6LoginRestore.Text) && !string.IsNullOrEmpty(guna2TextBox7KeywordRestore.Text))
+            {
+                guna2Button3Restore.Enabled = true;
+            }
+            else
+            {
+                guna2Button3Restore.Enabled = false;
+            }
+        }
+
+        #endregion
+
+
         #region Показать/Скрыть пароль для авторизации  
 
         private void guna2PictureBox1ShowPassword_Click(object sender, EventArgs e)
@@ -295,6 +324,37 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 else
                 {
                     MessageBox.Show("Ошибка, данных не существует");
+                }
+            }
+        }
+
+        #endregion
+
+
+        #region Восстановление пароля  
+
+        private void guna2Button3Restore_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string getUserPassword = "select password from users where @login = login and @keyword = keyword";
+                MySqlCommand commandGetUserPassword = new MySqlCommand(getUserPassword, connection);
+                commandGetUserPassword.Parameters.AddWithValue("@login", guna2TextBox6LoginRestore.Text);
+                commandGetUserPassword.Parameters.AddWithValue("@keyword", guna2TextBox7KeywordRestore.Text);
+                object userPassword = commandGetUserPassword.ExecuteScalar();
+
+                if (userPassword != null)
+                {
+                    panel3ForRestorePassword.Visible = false;
+                    panel1ForAuth.Visible = true;
+
+                    guna2TextBox2PasswordAuth.Text = userPassword.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка");
                 }
             }
         }
