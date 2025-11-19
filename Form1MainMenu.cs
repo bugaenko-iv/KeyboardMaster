@@ -29,7 +29,10 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void Form1MainMenu_Load(object sender, EventArgs e)
         {
             this.ActiveControl = richTextBox1Typing;
+
             targetText = richTextBox1Typing.Text;
+            richTextBox1Typing.Select(targetIndex, 1);
+            richTextBox1Typing.SelectionColor = Color.White;
         }
 
         #region Граница формы
@@ -145,6 +148,9 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2PictureBox1UserLogo_Click(object sender, EventArgs e)
         {
+            richTextBox1Typing.Select(targetIndex, 1);
+            richTextBox1Typing.SelectionColor = Color.DarkGray;
+
             string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
