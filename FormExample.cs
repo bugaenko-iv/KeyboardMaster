@@ -19,7 +19,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Shown += Form1MainMenu_Shown;
             this.Activated += Form1MainMenu_Activated;
             this.Resize += Form1MainMenu_Resize;
-            this.Size = new Size(1389, 795); // Установите фиксированный размер
+            this.Size = new Size(1389, 795); // Фиксированный размер формы
         }
 
         #region Граница формы

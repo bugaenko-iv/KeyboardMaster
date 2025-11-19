@@ -12,9 +12,9 @@ namespace Клавиатурный_тренажер_KeyboardMaster
     {
         bool isLeftMouseDown;
         Point startPoint;
-        string labelText;
-        string typingText;
         int countMistake = 0; // Кол-во ошибок в тексе при печатании
+        int targetIndex = 0;
+        string targetText;
 
         public Form1MainMenu()
         {
@@ -23,15 +23,13 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Shown += Form1MainMenu_Shown;
             this.Activated += Form1MainMenu_Activated;
             this.Resize += Form1MainMenu_Resize;
-            this.Size = new Size(1389, 795); // Установите фиксированный размер
-            guna2TextBox1Typing.Focus();
-            guna2TextBox1Typing.MaxLength = label1Text.Text.Length;
+            this.Size = new Size(1389, 795); // Фиксированный размер формы
         }
 
         private void Form1MainMenu_Load(object sender, EventArgs e)
         {
-            labelText = label1Text.Text;
-            this.ActiveControl = guna2TextBox1Typing;
+            this.ActiveControl = richTextBox1Typing;
+            targetText = richTextBox1Typing.Text;
         }
 
         #region Граница формы
@@ -103,20 +101,24 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Печать с клавиатуры и проверка
+        #region Печать с клавиатуры, изменение цвета символов и проверка текста  
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void richTextBox1Typing_KeyPress(object sender, KeyPressEventArgs e)
         {
-            typingText = guna2TextBox1Typing.Text;
-
-            if (!string.IsNullOrEmpty(guna2TextBox1Typing.Text))
+            if (targetIndex < targetText.Length)
             {
-                for (int i = 0; i < typingText.Length; i++) 
-                { 
-                    if (typingText[i].ToString() != labelText[i].ToString())
-                    {
-                        countMistake++;
-                    }
+                if (e.KeyChar == targetText[targetIndex])
+                {
+                    richTextBox1Typing.Select(targetIndex + 1, 1);
+                    richTextBox1Typing.SelectionColor = Color.White;
+
+                    targetIndex++;
+                }
+                else
+                {
+                    richTextBox1Typing.Select(targetIndex, 1);
+                    richTextBox1Typing.SelectionColor = Color.FromArgb(250, 128, 114);
+                    countMistake++;
                 }
             }
         }
@@ -162,6 +164,11 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             }
         }
 
+
+
+
+
         #endregion
+
     }
 }

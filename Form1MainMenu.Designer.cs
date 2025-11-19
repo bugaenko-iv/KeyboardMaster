@@ -33,11 +33,10 @@
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
             this.guna2Button1CollapseApll = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1ExitApll = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1Typing = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1Text = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.richTextBox1Typing = new System.Windows.Forms.RichTextBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
@@ -103,45 +102,10 @@
             this.guna2Button1ExitApll.Text = "X";
             this.guna2Button1ExitApll.Click += new System.EventHandler(this.guna2Button1ExitApll_Click);
             // 
-            // guna2TextBox1Typing
-            // 
-            this.guna2TextBox1Typing.BorderThickness = 0;
-            this.guna2TextBox1Typing.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1Typing.DefaultText = "";
-            this.guna2TextBox1Typing.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1Typing.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1Typing.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1Typing.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1Typing.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2TextBox1Typing.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1Typing.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2TextBox1Typing.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1Typing.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1Typing.Location = new System.Drawing.Point(194, 413);
-            this.guna2TextBox1Typing.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox1Typing.Name = "guna2TextBox1Typing";
-            this.guna2TextBox1Typing.PlaceholderText = "";
-            this.guna2TextBox1Typing.SelectedText = "";
-            this.guna2TextBox1Typing.Size = new System.Drawing.Size(990, 74);
-            this.guna2TextBox1Typing.TabIndex = 5;
-            this.guna2TextBox1Typing.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // label1Text
-            // 
-            this.label1Text.AutoSize = true;
-            this.label1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1Text.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1Text.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1Text.Location = new System.Drawing.Point(198, 357);
-            this.label1Text.Name = "label1Text";
-            this.label1Text.Size = new System.Drawing.Size(981, 29);
-            this.label1Text.TabIndex = 6;
-            this.label1Text.Text = "я проснулся утром и сразу почувствовал что сегодня что-то не так солнце светило";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(191, 280);
+            this.label1.Location = new System.Drawing.Point(194, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 7;
@@ -180,6 +144,21 @@
             this.guna2PictureBox1Logo.TabStop = false;
             this.guna2PictureBox1Logo.UseTransparentBackground = true;
             // 
+            // richTextBox1Typing
+            // 
+            this.richTextBox1Typing.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.richTextBox1Typing.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1Typing.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.richTextBox1Typing.ForeColor = System.Drawing.Color.DarkGray;
+            this.richTextBox1Typing.Location = new System.Drawing.Point(215, 375);
+            this.richTextBox1Typing.Name = "richTextBox1Typing";
+            this.richTextBox1Typing.ReadOnly = true;
+            this.richTextBox1Typing.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1Typing.Size = new System.Drawing.Size(978, 43);
+            this.richTextBox1Typing.TabIndex = 9;
+            this.richTextBox1Typing.Text = "я проснулся утром и сразу почувствовал что сегодня что-то не так солнце светило";
+            this.richTextBox1Typing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1Typing_KeyPress);
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,11 +166,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.richTextBox1Typing);
             this.Controls.Add(this.guna2PictureBox1UserLogo);
             this.Controls.Add(this.guna2PictureBox1Logo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label1Text);
-            this.Controls.Add(this.guna2TextBox1Typing);
             this.Controls.Add(this.panel1ControlForm1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -215,11 +193,10 @@
         private System.Windows.Forms.Panel panel1ForControlButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button1ExitApll;
         private Guna.UI2.WinForms.Guna2Button guna2Button1CollapseApll;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1Typing;
-        private System.Windows.Forms.Label label1Text;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1UserLogo;
+        private System.Windows.Forms.RichTextBox richTextBox1Typing;
     }
 }
 
