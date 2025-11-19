@@ -120,7 +120,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 else
                 {
                     richTextBox1Typing.Select(targetIndex, 1);
-                    richTextBox1Typing.SelectionColor = Color.FromArgb(250, 128, 114);
+                    richTextBox1Typing.SelectionBackColor = Color.FromArgb(250, 128, 114);
                     countMistake++;
                 }
             }
