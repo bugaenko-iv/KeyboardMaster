@@ -141,6 +141,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1InfoAboutUserOrAdmin.cs" />
     <Compile Include="Form2Authorization.cs">
       <SubType>Form</SubType>
     </Compile>

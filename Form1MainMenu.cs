@@ -33,6 +33,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             targetText = richTextBox1Typing.Text;
             richTextBox1Typing.Select(targetIndex, 1);
             richTextBox1Typing.SelectionColor = Color.White;
+
+            label1NameUserOrAdmin.Text = Class1InfoAboutUserOrAdmin.nameUser;
         }
 
         #region Граница формы
@@ -133,12 +135,18 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2PictureBox1UserLogo_MouseEnter(object sender, EventArgs e)
         {
-            guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_white;
+            if (Class1InfoAboutUserOrAdmin.nameUser == null)
+            {
+                guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_white;
+            }
         }
 
         private void guna2PictureBox1UserLogo_MouseLeave(object sender, EventArgs e)
         {
-            guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_grey;
+            if (Class1InfoAboutUserOrAdmin.nameUser == null)
+            {
+                guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_grey;
+            }
         }
 
         #endregion
@@ -148,31 +156,27 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2PictureBox1UserLogo_Click(object sender, EventArgs e)
         {
-            richTextBox1Typing.Select(targetIndex, 1);
-            richTextBox1Typing.SelectionColor = Color.DarkGray;
-
-            string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            if (Class1InfoAboutUserOrAdmin.nameUser == null)
             {
-                try
-                {
-                    connection.Open();
+                string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
 
-                    Form2Authorization form2Authorization = new Form2Authorization();
-                    this.Hide();
-                    form2Authorization.Show();
-                }
-                catch (MySqlException ex)
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    MessageBox.Show("Ошибка подключения к базе данных: " + ex.Message);
+                    try
+                    {
+                        connection.Open();
+
+                        Form2Authorization form2Authorization = new Form2Authorization();
+                        this.Hide();
+                        form2Authorization.Show();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Ошибка подключения к базе данных: " + ex.Message);
+                    }
                 }
             }
         }
-
-
-
-
 
         #endregion
 

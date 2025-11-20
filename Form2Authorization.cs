@@ -315,11 +315,19 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
                 if (dataFromBDuser != null)
                 {
-                    MessageBox.Show("Авторизация прошла успешно");
+                    Class1InfoAboutUserOrAdmin.nameUser = dataFromBDuser.ToString();
+
+                    Form1MainMenu form1MainMenu = new Form1MainMenu();
+                    this.Hide();
+                    form1MainMenu.Show();
                 }
                 else if (dataFromBDadmin != null)
                 {
-                    MessageBox.Show("Режим аминистратор");
+                    Class1InfoAboutUserOrAdmin.nameUser = dataFromBDadmin.ToString();
+
+                    Form1MainMenu form1MainMenu = new Form1MainMenu();
+                    this.Hide();
+                    form1MainMenu.Show();
                 }
                 else
                 {

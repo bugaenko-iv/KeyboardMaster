@@ -33,10 +33,10 @@
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
             this.guna2Button1CollapseApll = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1ExitApll = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.richTextBox1Typing = new System.Windows.Forms.RichTextBox();
+            this.label1NameUserOrAdmin = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
@@ -102,15 +102,6 @@
             this.guna2Button1ExitApll.Text = "X";
             this.guna2Button1ExitApll.Click += new System.EventHandler(this.guna2Button1ExitApll_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Кол-во ошибок";
-            // 
             // guna2PictureBox1UserLogo
             // 
             this.guna2PictureBox1UserLogo.BackColor = System.Drawing.Color.Transparent;
@@ -159,6 +150,17 @@
             this.richTextBox1Typing.Text = "я проснулся утром и сразу почувствовал что сегодня что-то не так солнце светило";
             this.richTextBox1Typing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1Typing_KeyPress);
             // 
+            // label1NameUserOrAdmin
+            // 
+            this.label1NameUserOrAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1NameUserOrAdmin.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1NameUserOrAdmin.Location = new System.Drawing.Point(844, 83);
+            this.label1NameUserOrAdmin.Name = "label1NameUserOrAdmin";
+            this.label1NameUserOrAdmin.Size = new System.Drawing.Size(463, 23);
+            this.label1NameUserOrAdmin.TabIndex = 10;
+            this.label1NameUserOrAdmin.Text = "NameUserOrAdmin";
+            this.label1NameUserOrAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,10 +168,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.label1NameUserOrAdmin);
             this.Controls.Add(this.richTextBox1Typing);
             this.Controls.Add(this.guna2PictureBox1UserLogo);
             this.Controls.Add(this.guna2PictureBox1Logo);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1ControlForm1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -193,10 +195,10 @@
         private System.Windows.Forms.Panel panel1ForControlButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button1ExitApll;
         private Guna.UI2.WinForms.Guna2Button guna2Button1CollapseApll;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1Logo;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1UserLogo;
         private System.Windows.Forms.RichTextBox richTextBox1Typing;
+        private System.Windows.Forms.Label label1NameUserOrAdmin;
     }
 }
 
