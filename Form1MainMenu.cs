@@ -204,7 +204,9 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2Button2EnterProfile_Click(object sender, EventArgs e)
         {
-
+            Form3UserProfile form3UserProfile = new Form3UserProfile();
+            this.Hide();
+            form3UserProfile.Show();
         }
 
         private void guna2Button3LeaveAcc_Click(object sender, EventArgs e)

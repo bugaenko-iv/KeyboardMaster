@@ -33,19 +33,19 @@
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
             this.guna2Button1CollapseApll = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1ExitApll = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.richTextBox1Typing = new System.Windows.Forms.RichTextBox();
             this.label1NameUserOrAdmin = new System.Windows.Forms.Label();
             this.guna2Panel1SpeedMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button3LeaveAcc = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2EnterProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
+            this.guna2Panel1SpeedMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
-            this.guna2Panel1SpeedMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -106,39 +106,6 @@
             this.guna2Button1ExitApll.TabIndex = 0;
             this.guna2Button1ExitApll.Text = "X";
             this.guna2Button1ExitApll.Click += new System.EventHandler(this.guna2Button1ExitApll_Click);
-            // 
-            // guna2PictureBox1UserLogo
-            // 
-            this.guna2PictureBox1UserLogo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1UserLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox1UserLogo.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.user_logo_grey;
-            this.guna2PictureBox1UserLogo.ImageRotate = 0F;
-            this.guna2PictureBox1UserLogo.Location = new System.Drawing.Point(1313, 83);
-            this.guna2PictureBox1UserLogo.Name = "guna2PictureBox1UserLogo";
-            this.guna2PictureBox1UserLogo.Size = new System.Drawing.Size(20, 22);
-            this.guna2PictureBox1UserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1UserLogo.TabIndex = 8;
-            this.guna2PictureBox1UserLogo.TabStop = false;
-            this.guna2PictureBox1UserLogo.Click += new System.EventHandler(this.guna2PictureBox1UserLogo_Click);
-            this.guna2PictureBox1UserLogo.MouseEnter += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseEnter);
-            this.guna2PictureBox1UserLogo.MouseLeave += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseLeave);
-            // 
-            // guna2PictureBox1Logo
-            // 
-            this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox1Logo.ErrorImage = null;
-            this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
-            this.guna2PictureBox1Logo.ImageRotate = 0F;
-            this.guna2PictureBox1Logo.InitialImage = null;
-            this.guna2PictureBox1Logo.Location = new System.Drawing.Point(24, 49);
-            this.guna2PictureBox1Logo.Name = "guna2PictureBox1Logo";
-            this.guna2PictureBox1Logo.Size = new System.Drawing.Size(194, 75);
-            this.guna2PictureBox1Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1Logo.TabIndex = 0;
-            this.guna2PictureBox1Logo.TabStop = false;
-            this.guna2PictureBox1Logo.UseTransparentBackground = true;
             // 
             // richTextBox1Typing
             // 
@@ -235,6 +202,39 @@
             this.guna2Button1Auth.TabIndex = 13;
             this.guna2Button1Auth.Text = "Статистика пользователей";
             // 
+            // guna2PictureBox1UserLogo
+            // 
+            this.guna2PictureBox1UserLogo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1UserLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1UserLogo.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.user_logo_grey;
+            this.guna2PictureBox1UserLogo.ImageRotate = 0F;
+            this.guna2PictureBox1UserLogo.Location = new System.Drawing.Point(1313, 83);
+            this.guna2PictureBox1UserLogo.Name = "guna2PictureBox1UserLogo";
+            this.guna2PictureBox1UserLogo.Size = new System.Drawing.Size(20, 22);
+            this.guna2PictureBox1UserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1UserLogo.TabIndex = 8;
+            this.guna2PictureBox1UserLogo.TabStop = false;
+            this.guna2PictureBox1UserLogo.Click += new System.EventHandler(this.guna2PictureBox1UserLogo_Click);
+            this.guna2PictureBox1UserLogo.MouseEnter += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseEnter);
+            this.guna2PictureBox1UserLogo.MouseLeave += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseLeave);
+            // 
+            // guna2PictureBox1Logo
+            // 
+            this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1Logo.ErrorImage = null;
+            this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
+            this.guna2PictureBox1Logo.ImageRotate = 0F;
+            this.guna2PictureBox1Logo.InitialImage = null;
+            this.guna2PictureBox1Logo.Location = new System.Drawing.Point(24, 49);
+            this.guna2PictureBox1Logo.Name = "guna2PictureBox1Logo";
+            this.guna2PictureBox1Logo.Size = new System.Drawing.Size(194, 75);
+            this.guna2PictureBox1Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1Logo.TabIndex = 0;
+            this.guna2PictureBox1Logo.TabStop = false;
+            this.guna2PictureBox1Logo.UseTransparentBackground = true;
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,9 +258,9 @@
             this.Click += new System.EventHandler(this.Form1MainMenu_Click);
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
+            this.guna2Panel1SpeedMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
-            this.guna2Panel1SpeedMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormExample));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3UserProfile));
             this.panel1ControlForm1 = new System.Windows.Forms.Panel();
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
             this.guna2Button1CollapseApll = new Guna.UI2.WinForms.Guna2Button();
@@ -114,8 +114,9 @@
             this.guna2PictureBox1Logo.TabIndex = 0;
             this.guna2PictureBox1Logo.TabStop = false;
             this.guna2PictureBox1Logo.UseTransparentBackground = true;
+            this.guna2PictureBox1Logo.Click += new System.EventHandler(this.guna2PictureBox1Logo_Click);
             // 
-            // FormExample
+            // Form3UserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +127,7 @@
             this.Controls.Add(this.panel1ControlForm1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormExample";
+            this.Name = "Form3UserProfile";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

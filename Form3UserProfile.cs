@@ -90,5 +90,17 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
+
+        #region Переход на главную форму
+
+        private void guna2PictureBox1Logo_Click(object sender, EventArgs e)
+        {
+            Form1MainMenu form1MainMenu = new Form1MainMenu();
+            this.Hide();
+            form1MainMenu.Show();
+        }
+
+        #endregion
+
     }
 }

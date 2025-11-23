@@ -376,24 +376,37 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             panel1ForAuth.Visible = false;
             panel3ForRestorePassword.Visible = true;
+
+            guna2TextBox1LoginAuth.Text = null;
+            guna2TextBox2PasswordAuth.Text = null;
         }
 
         private void label1CreateNewAcc_Click(object sender, EventArgs e)
         {
             panel1ForAuth.Visible = false;
             panel2ForRegistr.Visible = true;
+
+            guna2TextBox1LoginAuth.Text = null;
+            guna2TextBox2PasswordAuth.Text = null;
         }
 
         private void label1EnterInAcc_Click(object sender, EventArgs e)
         {
             panel2ForRegistr.Visible = false;
             panel1ForAuth.Visible = true;
+
+            guna2TextBox3LoginRegistr.Text = null;
+            guna2TextBox4PasswordRegistr.Text = null;
+            guna2TextBox5KeywordRegistr.Text = null;
         }
 
         private void label2EnterInAcc_Click(object sender, EventArgs e)
         {
             panel3ForRestorePassword.Visible = false;
             panel1ForAuth.Visible = true;
+
+            guna2TextBox6LoginRestore.Text = null;
+            guna2TextBox7KeywordRestore.Text = null;
         }
 
         #endregion
