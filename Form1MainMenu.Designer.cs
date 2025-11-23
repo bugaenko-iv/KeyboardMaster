@@ -37,10 +37,15 @@
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.richTextBox1Typing = new System.Windows.Forms.RichTextBox();
             this.label1NameUserOrAdmin = new System.Windows.Forms.Label();
+            this.guna2Panel1SpeedMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button3LeaveAcc = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2EnterProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
+            this.guna2Panel1SpeedMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -154,12 +159,81 @@
             // 
             this.label1NameUserOrAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label1NameUserOrAdmin.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1NameUserOrAdmin.Location = new System.Drawing.Point(844, 83);
+            this.label1NameUserOrAdmin.Location = new System.Drawing.Point(1076, 83);
             this.label1NameUserOrAdmin.Name = "label1NameUserOrAdmin";
-            this.label1NameUserOrAdmin.Size = new System.Drawing.Size(463, 23);
+            this.label1NameUserOrAdmin.Size = new System.Drawing.Size(233, 23);
             this.label1NameUserOrAdmin.TabIndex = 10;
             this.label1NameUserOrAdmin.Text = "NameUserOrAdmin";
             this.label1NameUserOrAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2Panel1SpeedMenu
+            // 
+            this.guna2Panel1SpeedMenu.Controls.Add(this.guna2Button3LeaveAcc);
+            this.guna2Panel1SpeedMenu.Controls.Add(this.guna2Button2EnterProfile);
+            this.guna2Panel1SpeedMenu.Controls.Add(this.guna2Button1Auth);
+            this.guna2Panel1SpeedMenu.Location = new System.Drawing.Point(1145, 120);
+            this.guna2Panel1SpeedMenu.Name = "guna2Panel1SpeedMenu";
+            this.guna2Panel1SpeedMenu.Size = new System.Drawing.Size(203, 135);
+            this.guna2Panel1SpeedMenu.TabIndex = 12;
+            this.guna2Panel1SpeedMenu.Visible = false;
+            // 
+            // guna2Button3LeaveAcc
+            // 
+            this.guna2Button3LeaveAcc.BorderRadius = 8;
+            this.guna2Button3LeaveAcc.CustomizableEdges.TopLeft = false;
+            this.guna2Button3LeaveAcc.CustomizableEdges.TopRight = false;
+            this.guna2Button3LeaveAcc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3LeaveAcc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3LeaveAcc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3LeaveAcc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3LeaveAcc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Button3LeaveAcc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3LeaveAcc.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3LeaveAcc.Location = new System.Drawing.Point(3, 87);
+            this.guna2Button3LeaveAcc.Name = "guna2Button3LeaveAcc";
+            this.guna2Button3LeaveAcc.Size = new System.Drawing.Size(196, 42);
+            this.guna2Button3LeaveAcc.TabIndex = 15;
+            this.guna2Button3LeaveAcc.Text = "Выйти";
+            this.guna2Button3LeaveAcc.Click += new System.EventHandler(this.guna2Button3LeaveAcc_Click);
+            // 
+            // guna2Button2EnterProfile
+            // 
+            this.guna2Button2EnterProfile.BorderRadius = 8;
+            this.guna2Button2EnterProfile.CustomizableEdges.BottomLeft = false;
+            this.guna2Button2EnterProfile.CustomizableEdges.BottomRight = false;
+            this.guna2Button2EnterProfile.CustomizableEdges.TopLeft = false;
+            this.guna2Button2EnterProfile.CustomizableEdges.TopRight = false;
+            this.guna2Button2EnterProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2EnterProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2EnterProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2EnterProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2EnterProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Button2EnterProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2EnterProfile.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2EnterProfile.Location = new System.Drawing.Point(3, 45);
+            this.guna2Button2EnterProfile.Name = "guna2Button2EnterProfile";
+            this.guna2Button2EnterProfile.Size = new System.Drawing.Size(196, 42);
+            this.guna2Button2EnterProfile.TabIndex = 14;
+            this.guna2Button2EnterProfile.Text = "Профиль";
+            this.guna2Button2EnterProfile.Click += new System.EventHandler(this.guna2Button2EnterProfile_Click);
+            // 
+            // guna2Button1Auth
+            // 
+            this.guna2Button1Auth.BorderRadius = 8;
+            this.guna2Button1Auth.CustomizableEdges.BottomLeft = false;
+            this.guna2Button1Auth.CustomizableEdges.BottomRight = false;
+            this.guna2Button1Auth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1Auth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1Auth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1Auth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1Auth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Button1Auth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1Auth.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1Auth.Location = new System.Drawing.Point(3, 3);
+            this.guna2Button1Auth.Name = "guna2Button1Auth";
+            this.guna2Button1Auth.Size = new System.Drawing.Size(196, 42);
+            this.guna2Button1Auth.TabIndex = 13;
+            this.guna2Button1Auth.Text = "Статистика пользователей";
             // 
             // Form1MainMenu
             // 
@@ -168,6 +242,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.guna2Panel1SpeedMenu);
             this.Controls.Add(this.label1NameUserOrAdmin);
             this.Controls.Add(this.richTextBox1Typing);
             this.Controls.Add(this.guna2PictureBox1UserLogo);
@@ -180,10 +255,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1MainMenu_Load);
+            this.Click += new System.EventHandler(this.Form1MainMenu_Click);
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
+            this.guna2Panel1SpeedMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +276,10 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1UserLogo;
         private System.Windows.Forms.RichTextBox richTextBox1Typing;
         private System.Windows.Forms.Label label1NameUserOrAdmin;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1SpeedMenu;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1Auth;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3LeaveAcc;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2EnterProfile;
     }
 }
 

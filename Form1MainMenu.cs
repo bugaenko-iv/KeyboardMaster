@@ -37,6 +37,12 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label1NameUserOrAdmin.Text = Class1InfoAboutUserOrAdmin.nameUser;
         }
 
+        private void Form1MainMenu_Click(object sender, EventArgs e)
+        {
+            guna2Panel1SpeedMenu.Visible = false;
+        }
+
+
         #region Граница формы
 
         private void Form1MainMenu_Shown(object sender, EventArgs e)
@@ -131,7 +137,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Изменение иконки пользователя     
+        #region Изменение иконки и имя пользователя     
 
         private void guna2PictureBox1UserLogo_MouseEnter(object sender, EventArgs e)
         {
@@ -139,12 +145,24 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             {
                 guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_white;
             }
+            else if (Class1InfoAboutUserOrAdmin.nameUser != null)
+            {
+                label1NameUserOrAdmin.ForeColor = Color.White;
+                guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_white;
+
+                guna2Panel1SpeedMenu.Visible = true;
+            }
         }
 
         private void guna2PictureBox1UserLogo_MouseLeave(object sender, EventArgs e)
         {
             if (Class1InfoAboutUserOrAdmin.nameUser == null)
             {
+                guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_grey;
+            }
+            else if (Class1InfoAboutUserOrAdmin.nameUser != null)
+            {
+                label1NameUserOrAdmin.ForeColor = Color.DarkGray;
                 guna2PictureBox1UserLogo.Image = Properties.Resources.user_logo_grey;
             }
         }
@@ -176,6 +194,22 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                     }
                 }
             }
+        }
+
+
+        #endregion
+
+
+        #region Работа кнопок быстрого меню  
+
+        private void guna2Button2EnterProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3LeaveAcc_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
 
         #endregion
