@@ -7,12 +7,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Клавиатурный_тренажер_KeyboardMaster
 {
-    public partial class UserProfile : Form
+    public partial class Form3UserProfile : Form
     {
         bool isLeftMouseDown;
         Point startPoint;
 
-        public UserProfile()
+        public Form3UserProfile()
         {
             InitializeComponent();
             this.DoubleBuffered = true;

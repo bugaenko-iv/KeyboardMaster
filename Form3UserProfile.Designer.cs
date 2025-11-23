@@ -1,6 +1,6 @@
 ﻿namespace Клавиатурный_тренажер_KeyboardMaster
 {
-    partial class UserProfile
+    partial class Form3UserProfile
     {
         /// <summary>
         /// Обязательная переменная конструктора.
