@@ -26,16 +26,17 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.Activated += Form1MainMenu_Activated;
             this.Resize += Form1MainMenu_Resize;
             this.Size = new Size(1389, 795); // Фиксированный размер формы
-            guna2TextBox1LoginAuth.MaxLength = 25;
-            guna2TextBox2PasswordAuth.MaxLength = 25;
+
+            guna2TextBox2PasswordAuth.MaxLength = 23;
+            guna2TextBox4PasswordRegistr.MaxLength = 23;
         }
 
         private void Form2Authorization_Load(object sender, EventArgs e)
         {
             guna2PictureBox1HidePassword.Location = new Point(253, 133); // Для авторизации
             guna2PictureBox2HidePassword.Location = new Point(253, 133); // Для регистрации
-            panel2ForRegistr.Location = new Point(526, 228); // Для панели регистрации
-            panel3ForRestorePassword.Location = new Point(526, 228); // Для панели восстановления пароля
+            panel2ForRegistr.Location = new Point(545, 228); // Для панели регистрации
+            panel3ForRestorePassword.Location = new Point(545, 228); // Для панели восстановления пароля
         }
 
         #region Граница формы
@@ -148,7 +149,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Активация кнопки регистрации. Поля "имя пользователя, пароль и ключевое слово "  
+        #region Активация кнопки регистрации. Поля "имя пользователя, пароль и ключевое слово" 
 
         private void guna2TextBox3LoginRegistr_TextChanged(object sender, EventArgs e)
         {

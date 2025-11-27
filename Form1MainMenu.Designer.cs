@@ -111,15 +111,16 @@
             // 
             this.richTextBox1Typing.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.richTextBox1Typing.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1Typing.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.richTextBox1Typing.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.richTextBox1Typing.ForeColor = System.Drawing.Color.DarkGray;
-            this.richTextBox1Typing.Location = new System.Drawing.Point(215, 375);
+            this.richTextBox1Typing.Location = new System.Drawing.Point(161, 369);
             this.richTextBox1Typing.Name = "richTextBox1Typing";
             this.richTextBox1Typing.ReadOnly = true;
             this.richTextBox1Typing.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1Typing.Size = new System.Drawing.Size(978, 43);
+            this.richTextBox1Typing.Size = new System.Drawing.Size(1071, 96);
             this.richTextBox1Typing.TabIndex = 9;
-            this.richTextBox1Typing.Text = "я проснулся утром и сразу почувствовал что сегодня что-то не так солнце светило";
+            this.richTextBox1Typing.Text = "тут находится текст тут находится текст тут находится текст тут находится текст т" +
+    "ут";
             this.richTextBox1Typing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1Typing_KeyPress);
             // 
             // label1NameUserOrAdmin

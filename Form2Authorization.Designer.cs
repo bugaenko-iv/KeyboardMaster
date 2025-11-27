@@ -154,6 +154,7 @@
             this.guna2TextBox1LoginAuth.SelectedText = "";
             this.guna2TextBox1LoginAuth.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox1LoginAuth.TabIndex = 2;
+            this.guna2TextBox1LoginAuth.TabStop = false;
             this.guna2TextBox1LoginAuth.TextChanged += new System.EventHandler(this.guna2TextBox1LoginAuth_TextChanged);
             // 
             // guna2TextBox2PasswordAuth
@@ -181,6 +182,7 @@
             this.guna2TextBox2PasswordAuth.SelectedText = "";
             this.guna2TextBox2PasswordAuth.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox2PasswordAuth.TabIndex = 3;
+            this.guna2TextBox2PasswordAuth.TabStop = false;
             this.guna2TextBox2PasswordAuth.UseSystemPasswordChar = true;
             this.guna2TextBox2PasswordAuth.TextChanged += new System.EventHandler(this.guna2TextBox2PasswordAuth_TextChanged);
             // 
@@ -222,7 +224,7 @@
             this.panel1ForAuth.Controls.Add(this.guna2Button1Auth);
             this.panel1ForAuth.Controls.Add(this.guna2TextBox1LoginAuth);
             this.panel1ForAuth.Controls.Add(this.guna2TextBox2PasswordAuth);
-            this.panel1ForAuth.Location = new System.Drawing.Point(526, 228);
+            this.panel1ForAuth.Location = new System.Drawing.Point(545, 228);
             this.panel1ForAuth.Name = "panel1ForAuth";
             this.panel1ForAuth.Size = new System.Drawing.Size(371, 352);
             this.panel1ForAuth.TabIndex = 5;
@@ -232,7 +234,7 @@
             this.label1CreateNewAcc.AutoSize = true;
             this.label1CreateNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1CreateNewAcc.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1CreateNewAcc.Location = new System.Drawing.Point(72, 301);
+            this.label1CreateNewAcc.Location = new System.Drawing.Point(66, 297);
             this.label1CreateNewAcc.Name = "label1CreateNewAcc";
             this.label1CreateNewAcc.Size = new System.Drawing.Size(174, 18);
             this.label1CreateNewAcc.TabIndex = 9;
@@ -246,7 +248,7 @@
             this.label1RestorePassword.AutoSize = true;
             this.label1RestorePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1RestorePassword.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1RestorePassword.Location = new System.Drawing.Point(95, 270);
+            this.label1RestorePassword.Location = new System.Drawing.Point(91, 270);
             this.label1RestorePassword.Name = "label1RestorePassword";
             this.label1RestorePassword.Size = new System.Drawing.Size(125, 18);
             this.label1RestorePassword.TabIndex = 8;
@@ -312,7 +314,7 @@
             this.panel2ForRegistr.Controls.Add(this.guna2Button2Registr);
             this.panel2ForRegistr.Controls.Add(this.guna2TextBox3LoginRegistr);
             this.panel2ForRegistr.Controls.Add(this.guna2TextBox4PasswordRegistr);
-            this.panel2ForRegistr.Location = new System.Drawing.Point(993, 228);
+            this.panel2ForRegistr.Location = new System.Drawing.Point(962, 228);
             this.panel2ForRegistr.Name = "panel2ForRegistr";
             this.panel2ForRegistr.Size = new System.Drawing.Size(371, 384);
             this.panel2ForRegistr.TabIndex = 8;
@@ -357,6 +359,7 @@
             this.guna2TextBox5KeywordRegistr.SelectedText = "";
             this.guna2TextBox5KeywordRegistr.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox5KeywordRegistr.TabIndex = 8;
+            this.guna2TextBox5KeywordRegistr.TabStop = false;
             this.guna2TextBox5KeywordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox5KeywordRegistr_TextChanged);
             // 
             // guna2PictureBox2HidePassword
@@ -441,6 +444,7 @@
             this.guna2TextBox3LoginRegistr.SelectedText = "";
             this.guna2TextBox3LoginRegistr.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox3LoginRegistr.TabIndex = 2;
+            this.guna2TextBox3LoginRegistr.TabStop = false;
             this.guna2TextBox3LoginRegistr.TextChanged += new System.EventHandler(this.guna2TextBox3LoginRegistr_TextChanged);
             // 
             // guna2TextBox4PasswordRegistr
@@ -468,6 +472,7 @@
             this.guna2TextBox4PasswordRegistr.SelectedText = "";
             this.guna2TextBox4PasswordRegistr.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox4PasswordRegistr.TabIndex = 3;
+            this.guna2TextBox4PasswordRegistr.TabStop = false;
             this.guna2TextBox4PasswordRegistr.UseSystemPasswordChar = true;
             this.guna2TextBox4PasswordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox4PasswordRegistr_TextChanged);
             // 
@@ -478,7 +483,7 @@
             this.panel3ForRestorePassword.Controls.Add(this.guna2Button3Restore);
             this.panel3ForRestorePassword.Controls.Add(this.guna2TextBox6LoginRestore);
             this.panel3ForRestorePassword.Controls.Add(this.guna2TextBox7KeywordRestore);
-            this.panel3ForRestorePassword.Location = new System.Drawing.Point(77, 228);
+            this.panel3ForRestorePassword.Location = new System.Drawing.Point(128, 228);
             this.panel3ForRestorePassword.Name = "panel3ForRestorePassword";
             this.panel3ForRestorePassword.Size = new System.Drawing.Size(371, 352);
             this.panel3ForRestorePassword.TabIndex = 10;
@@ -489,7 +494,7 @@
             this.label2EnterInAcc.AutoSize = true;
             this.label2EnterInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2EnterInAcc.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2EnterInAcc.Location = new System.Drawing.Point(93, 270);
+            this.label2EnterInAcc.Location = new System.Drawing.Point(88, 270);
             this.label2EnterInAcc.Name = "label2EnterInAcc";
             this.label2EnterInAcc.Size = new System.Drawing.Size(120, 18);
             this.label2EnterInAcc.TabIndex = 11;
@@ -551,6 +556,7 @@
             this.guna2TextBox6LoginRestore.SelectedText = "";
             this.guna2TextBox6LoginRestore.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox6LoginRestore.TabIndex = 2;
+            this.guna2TextBox6LoginRestore.TabStop = false;
             this.guna2TextBox6LoginRestore.TextChanged += new System.EventHandler(this.guna2TextBox6LoginRestore_TextChanged);
             // 
             // guna2TextBox7KeywordRestore
@@ -578,6 +584,7 @@
             this.guna2TextBox7KeywordRestore.SelectedText = "";
             this.guna2TextBox7KeywordRestore.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox7KeywordRestore.TabIndex = 3;
+            this.guna2TextBox7KeywordRestore.TabStop = false;
             this.guna2TextBox7KeywordRestore.TextChanged += new System.EventHandler(this.guna2TextBox7KeywordRestore_TextChanged);
             // 
             // Form2Authorization
