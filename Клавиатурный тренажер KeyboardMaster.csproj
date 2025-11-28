@@ -219,5 +219,11 @@
   <ItemGroup>
     <None Include="images\logo_notvisible_password.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\update_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\update_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

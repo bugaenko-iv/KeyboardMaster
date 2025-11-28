@@ -41,6 +41,7 @@
             this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.button1UpdateTargetText = new System.Windows.Forms.Button();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.guna2Panel1SpeedMenu.SuspendLayout();
@@ -121,6 +122,8 @@
             this.richTextBox1Typing.TabIndex = 9;
             this.richTextBox1Typing.Text = "тут находится текст тут находится текст тут находится текст тут находится текст т" +
     "ут";
+            this.richTextBox1Typing.Click += new System.EventHandler(this.richTextBox1Typing_Click);
+            this.richTextBox1Typing.DoubleClick += new System.EventHandler(this.richTextBox1Typing_DoubleClick);
             this.richTextBox1Typing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1Typing_KeyPress);
             // 
             // label1NameUserOrAdmin
@@ -223,6 +226,7 @@
             // 
             this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1Logo.Enabled = false;
             this.guna2PictureBox1Logo.ErrorImage = null;
             this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
@@ -236,6 +240,26 @@
             this.guna2PictureBox1Logo.TabStop = false;
             this.guna2PictureBox1Logo.UseTransparentBackground = true;
             // 
+            // button1UpdateTargetText
+            // 
+            this.button1UpdateTargetText.BackColor = System.Drawing.Color.Transparent;
+            this.button1UpdateTargetText.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1UpdateTargetText.FlatAppearance.BorderSize = 0;
+            this.button1UpdateTargetText.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1UpdateTargetText.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1UpdateTargetText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1UpdateTargetText.ForeColor = System.Drawing.Color.Transparent;
+            this.button1UpdateTargetText.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.update_gray;
+            this.button1UpdateTargetText.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button1UpdateTargetText.Location = new System.Drawing.Point(690, 510);
+            this.button1UpdateTargetText.Name = "button1UpdateTargetText";
+            this.button1UpdateTargetText.Size = new System.Drawing.Size(28, 26);
+            this.button1UpdateTargetText.TabIndex = 16;
+            this.button1UpdateTargetText.UseVisualStyleBackColor = false;
+            this.button1UpdateTargetText.Click += new System.EventHandler(this.button1UpdateTargetText_Click);
+            this.button1UpdateTargetText.MouseEnter += new System.EventHandler(this.button1UpdateTargetText_MouseEnter);
+            this.button1UpdateTargetText.MouseLeave += new System.EventHandler(this.button1UpdateTargetText_MouseLeave);
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +267,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.button1UpdateTargetText);
             this.Controls.Add(this.guna2Panel1SpeedMenu);
             this.Controls.Add(this.label1NameUserOrAdmin);
             this.Controls.Add(this.richTextBox1Typing);
@@ -281,6 +306,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1Auth;
         private Guna.UI2.WinForms.Guna2Button guna2Button3LeaveAcc;
         private Guna.UI2.WinForms.Guna2Button guna2Button2EnterProfile;
+        private System.Windows.Forms.Button button1UpdateTargetText;
     }
 }
 

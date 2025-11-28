@@ -15,7 +15,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         bool isLeftMouseDown;
         Point startPoint;
         int countMistake = 0; // Кол-во ошибок в тексте при печатании
-        int targetIndex = 0;
+        int targetIndex;
         string[] arrayText = {"и", "в", "не", "он", "на", "я", "что", "тот", "быть", "с", "а", "весь", "это", "как", "она", "по", "но", "они", "к", "у", "ты", "из", "мы", "за", "вы", "так", "же", "от", "сказать", "этот", "который", "мочь", "человек", "о", "один", "еще", "бы", "такой", "только", "себя", "свое", "какой", "когда", "уже", "для", "вот", "кто", "да", "говорить", "год", "знать", "можно", "статья", "если", "очень", "ну", "вот", "потом", "дело", "жизнь", "первый", "день", "тут", "во", "ничто", "очень", "со", "хотеть", "ли", "при", "голова", "надо", "без", "видеть", "идти", "теперь", "тоже", "стоять", "друг", "дом", "теперь", "можно", "после", "здесь", "думать", "место", "лицо", "друг", "жить", "делать", "через", "общий", "знать", "новый", "два", "видеть", "идти", "один", "под", "где", "потом", "делать", "два", "при", "мой", "идти", "хотеть", "жить", "работа", "рука", "раз", "слово", "солнце", "море", "ветер", "небо", "земля", "свет", "трава", "звезда", "дождь", "огонь", "река", "утро", "вечер", "ночь", "звук", "цвет", "вкус", "запах", "чувство", "радость", "печаль", "надежда", "вера", "любовь", "смерть", "время", "путь", "сила", "мир", "красота", "правда", "ложь", "ум", "душа", "тело", "сердце", "мысль", "давать", "нога", "книга", "писать", "читать", "учить", "студент", "учитель", "класс", "урок", "задание", "ответ", "вопрос", "причина", "следствие", "результат", "процесс", "метод", "способ", "пример", "правило", "исключение", "структура", "элемент", "функция", "задача", "решение", "проблема", "сложность", "легкость", "быстро", "медленно", "громко", "тихо", "высоко", "низко", "далеко", "близко", "внутри", "наружи", "слева", "справа", "вперед", "назад", "вверх", "вниз", "всегда", "никогда", "часто", "редко", "иногда", "обычно", "везде", "начинать", "получать", "делать", "смотреть", "думать", "ждать", "искать", "находить", "создавать", "использовать", "понимать", "чувствовать", "помнить", "забывать", "менять", "оставаться", "появляться", "исчезать", "расти", "падать", "лежать", "стоять", "сидеть", "бежать", "лететь", "плыть", "идти", "ехать", "возвращаться", "приходить", "уходить", "заходить", "выходить", "входить", "лежать", "сидеть", "стоять", "висеть", "лежать", "стоять", "сидеть", "смотреть", "слушать", "говорить", "писать", "читать", "учить", "работать", "отдыхать", "спать", "есть", "пить", "дышать", "жить", "умирать", "рождаться", "расти", "стареть", "выздоравливать", "улыбаться", "плакать", "смеяться", "грустить", "злиться", "радоваться", "удивляться", "бояться", "надеяться", "верить", "любить", "ненавидеть", "просить", "давать", "брать", "отдавать", "принимать", "отправлять", "получать", "делать", "создавать", "использовать", "применять", "строить", "разрушать", "открывать", "закрывать", "начинать", "заканчивать", "продолжать", "останавливаться", "двигаться", "спешить", "литьмед", "торопиться", "опаздывать", "успевать", "готовить", "варить", "жарить", "печь", "резать", "чистить", "мыть", "сушить", "гладить", "стирать", "убирать", "ремонтировать", "чинить"};
         string targetText;
 
@@ -32,23 +32,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void Form1MainMenu_Load(object sender, EventArgs e)
         {
             label1NameUserOrAdmin.Text = Class1InfoAboutUserOrAdmin.nameUser;
-
-            Random random = new Random();
-            int countIteration = 0;
-
-            while (countIteration < arrayText.Length)
-            {
-                int indexSymbol = random.Next(0, arrayText.Length);
-                targetText += arrayText[indexSymbol] + " ";
-
-                countIteration++;
-            }
-
-            richTextBox1Typing.Text = targetText;
-
-            this.ActiveControl = richTextBox1Typing;
-            richTextBox1Typing.Select(targetIndex, 1);
-            richTextBox1Typing.SelectionColor = Color.White;
+            generationTargetText();
         }
 
         private void Form1MainMenu_Click(object sender, EventArgs e)
@@ -151,6 +135,34 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
+        #region Метод случайной генерации текста для печати 
+
+        public void generationTargetText()
+        {
+            targetIndex = 0;
+            targetText = null;
+
+            Random random = new Random();
+            int countIteration = 0;
+
+            while (countIteration < arrayText.Length)
+            {
+                int indexSymbol = random.Next(0, arrayText.Length);
+                targetText += arrayText[indexSymbol] + " ";
+
+                countIteration++;
+            }
+
+            richTextBox1Typing.Text = targetText;
+
+            this.ActiveControl = richTextBox1Typing;
+            richTextBox1Typing.Select(targetIndex, 1);
+            richTextBox1Typing.SelectionColor = Color.White;
+        }
+
+        #endregion
+
+
         #region Изменение иконки и имя пользователя     
 
         private void guna2PictureBox1UserLogo_MouseEnter(object sender, EventArgs e)
@@ -228,7 +240,50 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             Application.Restart();
         }
 
+
+
+
         #endregion
+
+
+        #region Обновление текста для печати и анимация кнопки
+
+        private void button1UpdateTargetText_Click(object sender, EventArgs e)
+        {
+            generationTargetText();
+        }
+
+        private void button1UpdateTargetText_MouseEnter(object sender, EventArgs e)
+        {
+            button1UpdateTargetText.Image = Properties.Resources.update_white;
+        }
+
+        private void button1UpdateTargetText_MouseLeave(object sender, EventArgs e)
+        {
+            button1UpdateTargetText.Image = Properties.Resources.update_gray;
+        }
+
+        #endregion
+
+
+        #region Активация курсора на нулевом символе  
+
+        private void richTextBox1Typing_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = richTextBox1Typing;
+            richTextBox1Typing.Select(targetIndex, 1);
+            richTextBox1Typing.SelectionColor = Color.White;
+        }
+
+        private void richTextBox1Typing_DoubleClick(object sender, EventArgs e)
+        {
+            this.ActiveControl = richTextBox1Typing;
+            richTextBox1Typing.Select(targetIndex, 1);
+            richTextBox1Typing.SelectionColor = Color.White;
+        }
+
+        #endregion
+
 
     }
 }
