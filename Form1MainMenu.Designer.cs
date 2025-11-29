@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1MainMenu));
             this.panel1ControlForm1 = new System.Windows.Forms.Panel();
             this.panel1ForControlButton = new System.Windows.Forms.Panel();
@@ -42,6 +43,8 @@
             this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.button1UpdateTargetText = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1Timer = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.guna2Panel1SpeedMenu.SuspendLayout();
@@ -260,6 +263,23 @@
             this.button1UpdateTargetText.MouseEnter += new System.EventHandler(this.button1UpdateTargetText_MouseEnter);
             this.button1UpdateTargetText.MouseLeave += new System.EventHandler(this.button1UpdateTargetText_MouseLeave);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1Timer
+            // 
+            this.label1Timer.AutoSize = true;
+            this.label1Timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1Timer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(183)))), ((int)(((byte)(20)))));
+            this.label1Timer.Location = new System.Drawing.Point(155, 309);
+            this.label1Timer.Name = "label1Timer";
+            this.label1Timer.Size = new System.Drawing.Size(148, 30);
+            this.label1Timer.TabIndex = 17;
+            this.label1Timer.Text = "label1Timer";
+            this.label1Timer.Visible = false;
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +287,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.label1Timer);
             this.Controls.Add(this.button1UpdateTargetText);
             this.Controls.Add(this.guna2Panel1SpeedMenu);
             this.Controls.Add(this.label1NameUserOrAdmin);
@@ -307,6 +328,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3LeaveAcc;
         private Guna.UI2.WinForms.Guna2Button guna2Button2EnterProfile;
         private System.Windows.Forms.Button button1UpdateTargetText;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1Timer;
     }
 }
 
