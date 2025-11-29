@@ -143,6 +143,25 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
+        #region Работа таймера
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (seconds > 0)
+            {
+                seconds--;
+            }
+            else
+            {
+                timer1.Enabled = false;
+            }
+
+            label1Timer.Text = seconds.ToString();
+        }
+
+        #endregion
+
+
         #region Метод случайной генерации текста для печати 
 
         public void generationTargetText()
@@ -166,6 +185,26 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             this.ActiveControl = richTextBox1Typing;
             richTextBox1Typing.Select(targetIndex, 1);
             richTextBox1Typing.SelectionColor = Color.White;
+        }
+
+        #endregion
+
+
+        #region Обновление текста для печати и анимация кнопки
+
+        private void button1UpdateTargetText_Click(object sender, EventArgs e)
+        {
+            generationTargetText();
+        }
+
+        private void button1UpdateTargetText_MouseEnter(object sender, EventArgs e)
+        {
+            button1UpdateTargetText.Image = Properties.Resources.update_white;
+        }
+
+        private void button1UpdateTargetText_MouseLeave(object sender, EventArgs e)
+        {
+            button1UpdateTargetText.Image = Properties.Resources.update_gray;
         }
 
         #endregion
@@ -254,26 +293,6 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
-        #region Обновление текста для печати и анимация кнопки
-
-        private void button1UpdateTargetText_Click(object sender, EventArgs e)
-        {
-            generationTargetText();
-        }
-
-        private void button1UpdateTargetText_MouseEnter(object sender, EventArgs e)
-        {
-            button1UpdateTargetText.Image = Properties.Resources.update_white;
-        }
-
-        private void button1UpdateTargetText_MouseLeave(object sender, EventArgs e)
-        {
-            button1UpdateTargetText.Image = Properties.Resources.update_gray;
-        }
-
-        #endregion
-
-
         #region Активация курсора на нулевом символе  
 
         private void richTextBox1Typing_Click(object sender, EventArgs e)
@@ -293,19 +312,5 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         #endregion
 
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (seconds > 0)
-            {
-                seconds--;
-            }
-            else
-            {
-                timer1.Enabled = false;
-            }
-
-            label1Timer.Text = seconds.ToString();
-        }
     }
 }
