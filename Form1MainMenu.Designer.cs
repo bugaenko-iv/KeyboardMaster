@@ -45,11 +45,17 @@
             this.button1UpdateTargetText = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1Timer = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4_120Sec = new System.Windows.Forms.Label();
+            this.label3_60Sec = new System.Windows.Forms.Label();
+            this.label2_30Sec = new System.Windows.Forms.Label();
+            this.label1_15Sec = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.guna2Panel1SpeedMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -280,6 +286,76 @@
             this.label1Timer.Text = "label1Timer";
             this.label1Timer.Visible = false;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.Controls.Add(this.label4_120Sec);
+            this.guna2Panel1.Controls.Add(this.label3_60Sec);
+            this.guna2Panel1.Controls.Add(this.label2_30Sec);
+            this.guna2Panel1.Controls.Add(this.label1_15Sec);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(307, 83);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(337, 41);
+            this.guna2Panel1.TabIndex = 18;
+            // 
+            // label4_120Sec
+            // 
+            this.label4_120Sec.AutoSize = true;
+            this.label4_120Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label4_120Sec.ForeColor = System.Drawing.Color.DarkGray;
+            this.label4_120Sec.Location = new System.Drawing.Point(137, 12);
+            this.label4_120Sec.Name = "label4_120Sec";
+            this.label4_120Sec.Size = new System.Drawing.Size(32, 17);
+            this.label4_120Sec.TabIndex = 22;
+            this.label4_120Sec.Text = "120";
+            this.label4_120Sec.Click += new System.EventHandler(this.label4_120Sec_Click);
+            this.label4_120Sec.MouseEnter += new System.EventHandler(this.label4_120Sec_MouseEnter);
+            this.label4_120Sec.MouseLeave += new System.EventHandler(this.label4_120Sec_MouseLeave);
+            // 
+            // label3_60Sec
+            // 
+            this.label3_60Sec.AutoSize = true;
+            this.label3_60Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label3_60Sec.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3_60Sec.Location = new System.Drawing.Point(97, 12);
+            this.label3_60Sec.Name = "label3_60Sec";
+            this.label3_60Sec.Size = new System.Drawing.Size(24, 17);
+            this.label3_60Sec.TabIndex = 21;
+            this.label3_60Sec.Text = "60";
+            this.label3_60Sec.Click += new System.EventHandler(this.label3_60Sec_Click);
+            this.label3_60Sec.MouseEnter += new System.EventHandler(this.label3_60Sec_MouseEnter);
+            this.label3_60Sec.MouseLeave += new System.EventHandler(this.label3_60Sec_MouseLeave);
+            // 
+            // label2_30Sec
+            // 
+            this.label2_30Sec.AutoSize = true;
+            this.label2_30Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label2_30Sec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(183)))), ((int)(((byte)(20)))));
+            this.label2_30Sec.Location = new System.Drawing.Point(57, 12);
+            this.label2_30Sec.Name = "label2_30Sec";
+            this.label2_30Sec.Size = new System.Drawing.Size(24, 17);
+            this.label2_30Sec.TabIndex = 20;
+            this.label2_30Sec.Text = "30";
+            this.label2_30Sec.Click += new System.EventHandler(this.label2_30Sec_Click);
+            this.label2_30Sec.MouseEnter += new System.EventHandler(this.label2_30Sec_MouseEnter);
+            this.label2_30Sec.MouseLeave += new System.EventHandler(this.label2_30Sec_MouseLeave);
+            // 
+            // label1_15Sec
+            // 
+            this.label1_15Sec.AutoSize = true;
+            this.label1_15Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1_15Sec.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1_15Sec.Location = new System.Drawing.Point(17, 12);
+            this.label1_15Sec.Name = "label1_15Sec";
+            this.label1_15Sec.Size = new System.Drawing.Size(24, 17);
+            this.label1_15Sec.TabIndex = 19;
+            this.label1_15Sec.Text = "15";
+            this.label1_15Sec.Click += new System.EventHandler(this.label1_15Sec_Click);
+            this.label1_15Sec.MouseEnter += new System.EventHandler(this.label1_15Sec_MouseEnter);
+            this.label1_15Sec.MouseLeave += new System.EventHandler(this.label1_15Sec_MouseLeave);
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +363,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1Timer);
             this.Controls.Add(this.button1UpdateTargetText);
             this.Controls.Add(this.guna2Panel1SpeedMenu);
@@ -308,6 +385,8 @@
             this.guna2Panel1SpeedMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,6 +409,11 @@
         private System.Windows.Forms.Button button1UpdateTargetText;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1Timer;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label label4_120Sec;
+        private System.Windows.Forms.Label label3_60Sec;
+        private System.Windows.Forms.Label label2_30Sec;
+        private System.Windows.Forms.Label label1_15Sec;
     }
 }
 

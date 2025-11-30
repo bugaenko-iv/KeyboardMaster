@@ -14,9 +14,10 @@ namespace Клавиатурный_тренажер_KeyboardMaster
     {
         Point startPoint;
         bool isLeftMouseDown;
+        bool isActiveLabel15Sec, isActiveLabel30Sec, isActiveLabel60Sec, isActiveLabel120Sec;
         int countMistake = 0;
         int targetIndex;
-        int seconds = 5;
+        int seconds = 0;
         string[] arrayText = {"и", "в", "не", "он", "на", "я", "что", "тот", "быть", "с", "а", "весь", "это", "как", "она", "по", "но", "они", "к", "у", "ты", "из", "мы", "за", "вы", "так", "же", "от", "сказать", "этот", "который", "мочь", "человек", "о", "один", "еще", "бы", "такой", "только", "себя", "свое", "какой", "когда", "уже", "для", "вот", "кто", "да", "говорить", "год", "знать", "можно", "статья", "если", "очень", "ну", "вот", "потом", "дело", "жизнь", "первый", "день", "тут", "во", "ничто", "очень", "со", "хотеть", "ли", "при", "голова", "надо", "без", "видеть", "идти", "теперь", "тоже", "стоять", "друг", "дом", "теперь", "можно", "после", "здесь", "думать", "место", "лицо", "друг", "жить", "делать", "через", "общий", "знать", "новый", "два", "видеть", "идти", "один", "под", "где", "потом", "делать", "два", "при", "мой", "идти", "хотеть", "жить", "работа", "рука", "раз", "слово", "солнце", "море", "ветер", "небо", "земля", "свет", "трава", "звезда", "дождь", "огонь", "река", "утро", "вечер", "ночь", "звук", "цвет", "вкус", "запах", "чувство", "радость", "печаль", "надежда", "вера", "любовь", "смерть", "время", "путь", "сила", "мир", "красота", "правда", "ложь", "ум", "душа", "тело", "сердце", "мысль", "давать", "нога", "книга", "писать", "читать", "учить", "студент", "учитель", "класс", "урок", "задание", "ответ", "вопрос", "причина", "следствие", "результат", "процесс", "метод", "способ", "пример", "правило", "исключение", "структура", "элемент", "функция", "задача", "решение", "проблема", "сложность", "легкость", "быстро", "медленно", "громко", "тихо", "высоко", "низко", "далеко", "близко", "внутри", "наружи", "слева", "справа", "вперед", "назад", "вверх", "вниз", "всегда", "никогда", "часто", "редко", "иногда", "обычно", "везде", "начинать", "получать", "делать", "смотреть", "думать", "ждать", "искать", "находить", "создавать", "использовать", "понимать", "чувствовать", "помнить", "забывать", "менять", "оставаться", "появляться", "исчезать", "расти", "падать", "лежать", "стоять", "сидеть", "бежать", "лететь", "плыть", "идти", "ехать", "возвращаться", "приходить", "уходить", "заходить", "выходить", "входить", "лежать", "сидеть", "стоять", "висеть", "лежать", "стоять", "сидеть", "смотреть", "слушать", "говорить", "писать", "читать", "учить", "работать", "отдыхать", "спать", "есть", "пить", "дышать", "жить", "умирать", "рождаться", "расти", "стареть", "выздоравливать", "улыбаться", "плакать", "смеяться", "грустить", "злиться", "радоваться", "удивляться", "бояться", "надеяться", "верить", "любить", "ненавидеть", "просить", "давать", "брать", "отдавать", "принимать", "отправлять", "получать", "делать", "создавать", "использовать", "применять", "строить", "разрушать", "открывать", "закрывать", "начинать", "заканчивать", "продолжать", "останавливаться", "двигаться", "спешить", "литьмед", "торопиться", "опаздывать", "успевать", "готовить", "варить", "жарить", "печь", "резать", "чистить", "мыть", "сушить", "гладить", "стирать", "убирать", "ремонтировать", "чинить"};
         string targetText;
 
@@ -33,7 +34,10 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void Form1MainMenu_Load(object sender, EventArgs e)
         {
             label1NameUserOrAdmin.Text = Class1InfoAboutUserOrAdmin.nameUser;
+            isActiveLabel30Sec = true;
+            seconds = 30;
             label1Timer.Text = seconds.ToString();
+
             generationTargetText();
         }
 
@@ -309,6 +313,143 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             richTextBox1Typing.SelectionColor = Color.White;
         }
 
+
+
+
+
+
+        #endregion
+
+
+        #region Анимация кнопок и выбор продолжительности таймера
+
+        private void label1_15Sec_MouseEnter(object sender, EventArgs e) //label15
+        {
+            if (!isActiveLabel15Sec)
+            {
+                label1_15Sec.ForeColor = Color.White;
+            }
+        }
+
+        private void label1_15Sec_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel15Sec)
+            {
+                label1_15Sec.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label2_30Sec_MouseEnter(object sender, EventArgs e) //label30
+        {
+            if (!isActiveLabel30Sec)
+            {
+                label2_30Sec.ForeColor = Color.White;
+            }
+        }
+
+        private void label2_30Sec_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel30Sec)
+            {
+                label2_30Sec.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label3_60Sec_MouseEnter(object sender, EventArgs e) //label60
+        {
+            if (!isActiveLabel60Sec)
+            {
+                label3_60Sec.ForeColor = Color.White;
+            }
+        }
+
+        private void label3_60Sec_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel60Sec)
+            {
+                label3_60Sec.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label4_120Sec_MouseEnter(object sender, EventArgs e) //label120
+        {
+            if (!isActiveLabel120Sec)
+            {
+                label4_120Sec.ForeColor = Color.White;
+            }
+        }
+
+        private void label4_120Sec_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel120Sec)
+            {
+                label4_120Sec.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label1_15Sec_Click(object sender, EventArgs e) //label15
+        {
+            seconds = Convert.ToInt32(label1_15Sec.Text);
+            label1Timer.Text = seconds.ToString();
+
+            isActiveLabel15Sec = true;
+            label1_15Sec.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel30Sec = false;
+            label2_30Sec.ForeColor = Color.DarkGray;
+            isActiveLabel60Sec = false;
+            label3_60Sec.ForeColor = Color.DarkGray;
+            isActiveLabel120Sec = false;
+            label4_120Sec.ForeColor = Color.DarkGray;
+        }
+
+        private void label2_30Sec_Click(object sender, EventArgs e) //label30
+        {
+            seconds = Convert.ToInt32(label2_30Sec.Text);
+            label1Timer.Text = seconds.ToString();
+
+            isActiveLabel30Sec = true;
+            label2_30Sec.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel15Sec = false;
+            label1_15Sec.ForeColor = Color.DarkGray;
+            isActiveLabel60Sec = false;
+            label3_60Sec.ForeColor = Color.DarkGray;
+            isActiveLabel120Sec = false;
+            label4_120Sec.ForeColor = Color.DarkGray;
+        }
+
+        private void label3_60Sec_Click(object sender, EventArgs e) //label60
+        {
+            seconds = Convert.ToInt32(label3_60Sec.Text);
+            label1Timer.Text = seconds.ToString();
+
+            isActiveLabel60Sec = true;
+            label3_60Sec.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel15Sec = false;
+            label1_15Sec.ForeColor = Color.DarkGray;
+            isActiveLabel30Sec = false;
+            label2_30Sec.ForeColor = Color.DarkGray;
+            isActiveLabel120Sec = false;
+            label4_120Sec.ForeColor = Color.DarkGray;
+        }
+
+        private void label4_120Sec_Click(object sender, EventArgs e) //label120
+        {
+            seconds = Convert.ToInt32(label4_120Sec.Text);
+            label1Timer.Text = seconds.ToString();
+
+            isActiveLabel120Sec = true;
+            label4_120Sec.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel15Sec = false;
+            label1_15Sec.ForeColor = Color.DarkGray;
+            isActiveLabel30Sec = false;
+            label2_30Sec.ForeColor = Color.DarkGray;
+            isActiveLabel60Sec = false;
+            label3_60Sec.ForeColor = Color.DarkGray;
+        }
 
         #endregion
 
