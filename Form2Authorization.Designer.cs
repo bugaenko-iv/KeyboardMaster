@@ -107,6 +107,7 @@
             this.guna2Button1CollapseApll.Name = "guna2Button1CollapseApll";
             this.guna2Button1CollapseApll.Size = new System.Drawing.Size(50, 35);
             this.guna2Button1CollapseApll.TabIndex = 1;
+            this.guna2Button1CollapseApll.TabStop = false;
             this.guna2Button1CollapseApll.Text = "—";
             this.guna2Button1CollapseApll.Click += new System.EventHandler(this.guna2Button1CollapseApll_Click);
             // 
@@ -126,6 +127,7 @@
             this.guna2Button1ExitApll.Name = "guna2Button1ExitApll";
             this.guna2Button1ExitApll.Size = new System.Drawing.Size(50, 35);
             this.guna2Button1ExitApll.TabIndex = 0;
+            this.guna2Button1ExitApll.TabStop = false;
             this.guna2Button1ExitApll.Text = "X";
             this.guna2Button1ExitApll.Click += new System.EventHandler(this.guna2Button1ExitApll_Click);
             // 
@@ -154,7 +156,6 @@
             this.guna2TextBox1LoginAuth.SelectedText = "";
             this.guna2TextBox1LoginAuth.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox1LoginAuth.TabIndex = 2;
-            this.guna2TextBox1LoginAuth.TabStop = false;
             this.guna2TextBox1LoginAuth.TextChanged += new System.EventHandler(this.guna2TextBox1LoginAuth_TextChanged);
             // 
             // guna2TextBox2PasswordAuth
@@ -182,21 +183,25 @@
             this.guna2TextBox2PasswordAuth.SelectedText = "";
             this.guna2TextBox2PasswordAuth.Size = new System.Drawing.Size(285, 46);
             this.guna2TextBox2PasswordAuth.TabIndex = 3;
-            this.guna2TextBox2PasswordAuth.TabStop = false;
             this.guna2TextBox2PasswordAuth.UseSystemPasswordChar = true;
             this.guna2TextBox2PasswordAuth.TextChanged += new System.EventHandler(this.guna2TextBox2PasswordAuth_TextChanged);
             // 
             // guna2Button1Auth
             // 
+            this.guna2Button1Auth.Animated = true;
+            this.guna2Button1Auth.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this.guna2Button1Auth.BorderRadius = 12;
+            this.guna2Button1Auth.BorderThickness = 2;
             this.guna2Button1Auth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1Auth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1Auth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1Auth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1Auth.Enabled = false;
             this.guna2Button1Auth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2Button1Auth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button1Auth.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2Button1Auth.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button1Auth.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1Auth.IndicateFocus = true;
             this.guna2Button1Auth.Location = new System.Drawing.Point(9, 207);
             this.guna2Button1Auth.Name = "guna2Button1Auth";
             this.guna2Button1Auth.Size = new System.Drawing.Size(285, 45);
@@ -211,7 +216,7 @@
             this.label1TextAuthorization.Location = new System.Drawing.Point(13, 0);
             this.label1TextAuthorization.Name = "label1TextAuthorization";
             this.label1TextAuthorization.Size = new System.Drawing.Size(178, 31);
-            this.label1TextAuthorization.TabIndex = 1;
+            this.label1TextAuthorization.TabIndex = 17;
             this.label1TextAuthorization.Text = "Авторизация";
             // 
             // panel1ForAuth
@@ -227,7 +232,7 @@
             this.panel1ForAuth.Location = new System.Drawing.Point(545, 228);
             this.panel1ForAuth.Name = "panel1ForAuth";
             this.panel1ForAuth.Size = new System.Drawing.Size(371, 352);
-            this.panel1ForAuth.TabIndex = 5;
+            this.panel1ForAuth.TabIndex = 0;
             // 
             // label1CreateNewAcc
             // 
@@ -237,7 +242,7 @@
             this.label1CreateNewAcc.Location = new System.Drawing.Point(66, 297);
             this.label1CreateNewAcc.Name = "label1CreateNewAcc";
             this.label1CreateNewAcc.Size = new System.Drawing.Size(174, 18);
-            this.label1CreateNewAcc.TabIndex = 9;
+            this.label1CreateNewAcc.TabIndex = 13;
             this.label1CreateNewAcc.Text = "Создать новый аккаунт";
             this.label1CreateNewAcc.Click += new System.EventHandler(this.label1CreateNewAcc_Click);
             this.label1CreateNewAcc.MouseEnter += new System.EventHandler(this.label1CreateNewAcc_MouseEnter);
@@ -251,7 +256,7 @@
             this.label1RestorePassword.Location = new System.Drawing.Point(91, 270);
             this.label1RestorePassword.Name = "label1RestorePassword";
             this.label1RestorePassword.Size = new System.Drawing.Size(125, 18);
-            this.label1RestorePassword.TabIndex = 8;
+            this.label1RestorePassword.TabIndex = 12;
             this.label1RestorePassword.Text = "Забыли пароль?";
             this.label1RestorePassword.Click += new System.EventHandler(this.label1RestorePassword_Click);
             this.label1RestorePassword.MouseEnter += new System.EventHandler(this.label1RestorePassword_MouseEnter);
@@ -328,7 +333,7 @@
             this.label1EnterInAcc.Location = new System.Drawing.Point(93, 334);
             this.label1EnterInAcc.Name = "label1EnterInAcc";
             this.label1EnterInAcc.Size = new System.Drawing.Size(120, 18);
-            this.label1EnterInAcc.TabIndex = 10;
+            this.label1EnterInAcc.TabIndex = 15;
             this.label1EnterInAcc.Text = "Войти в аккаунт";
             this.label1EnterInAcc.Click += new System.EventHandler(this.label1EnterInAcc_Click);
             this.label1EnterInAcc.MouseEnter += new System.EventHandler(this.label1EnterInAcc_MouseEnter);
@@ -358,8 +363,7 @@
             this.guna2TextBox5KeywordRegistr.PlaceholderText = "Ключевое слово";
             this.guna2TextBox5KeywordRegistr.SelectedText = "";
             this.guna2TextBox5KeywordRegistr.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox5KeywordRegistr.TabIndex = 8;
-            this.guna2TextBox5KeywordRegistr.TabStop = false;
+            this.guna2TextBox5KeywordRegistr.TabIndex = 10;
             this.guna2TextBox5KeywordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox5KeywordRegistr_TextChanged);
             // 
             // guna2PictureBox2HidePassword
@@ -398,24 +402,29 @@
             this.label1TextRegistration.Location = new System.Drawing.Point(13, 0);
             this.label1TextRegistration.Name = "label1TextRegistration";
             this.label1TextRegistration.Size = new System.Drawing.Size(174, 31);
-            this.label1TextRegistration.TabIndex = 1;
+            this.label1TextRegistration.TabIndex = 18;
             this.label1TextRegistration.Text = "Регистрация";
             // 
             // guna2Button2Registr
             // 
+            this.guna2Button2Registr.Animated = true;
+            this.guna2Button2Registr.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this.guna2Button2Registr.BorderRadius = 12;
+            this.guna2Button2Registr.BorderThickness = 2;
             this.guna2Button2Registr.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2Registr.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2Registr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2Registr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2Registr.Enabled = false;
             this.guna2Button2Registr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.guna2Button2Registr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button2Registr.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2Button2Registr.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button2Registr.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2Registr.IndicateFocus = true;
             this.guna2Button2Registr.Location = new System.Drawing.Point(9, 270);
             this.guna2Button2Registr.Name = "guna2Button2Registr";
             this.guna2Button2Registr.Size = new System.Drawing.Size(285, 45);
-            this.guna2Button2Registr.TabIndex = 4;
+            this.guna2Button2Registr.TabIndex = 11;
             this.guna2Button2Registr.Text = "Создать аккаунт";
             this.guna2Button2Registr.Click += new System.EventHandler(this.guna2Button2Registr_Click);
             // 
@@ -443,8 +452,7 @@
             this.guna2TextBox3LoginRegistr.PlaceholderText = "Имя пользователя";
             this.guna2TextBox3LoginRegistr.SelectedText = "";
             this.guna2TextBox3LoginRegistr.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox3LoginRegistr.TabIndex = 2;
-            this.guna2TextBox3LoginRegistr.TabStop = false;
+            this.guna2TextBox3LoginRegistr.TabIndex = 8;
             this.guna2TextBox3LoginRegistr.TextChanged += new System.EventHandler(this.guna2TextBox3LoginRegistr_TextChanged);
             // 
             // guna2TextBox4PasswordRegistr
@@ -471,8 +479,7 @@
             this.guna2TextBox4PasswordRegistr.PlaceholderText = "Пароль";
             this.guna2TextBox4PasswordRegistr.SelectedText = "";
             this.guna2TextBox4PasswordRegistr.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox4PasswordRegistr.TabIndex = 3;
-            this.guna2TextBox4PasswordRegistr.TabStop = false;
+            this.guna2TextBox4PasswordRegistr.TabIndex = 9;
             this.guna2TextBox4PasswordRegistr.UseSystemPasswordChar = true;
             this.guna2TextBox4PasswordRegistr.TextChanged += new System.EventHandler(this.guna2TextBox4PasswordRegistr_TextChanged);
             // 
@@ -497,7 +504,7 @@
             this.label2EnterInAcc.Location = new System.Drawing.Point(88, 270);
             this.label2EnterInAcc.Name = "label2EnterInAcc";
             this.label2EnterInAcc.Size = new System.Drawing.Size(120, 18);
-            this.label2EnterInAcc.TabIndex = 11;
+            this.label2EnterInAcc.TabIndex = 14;
             this.label2EnterInAcc.Text = "Войти в аккаунт";
             this.label2EnterInAcc.Click += new System.EventHandler(this.label2EnterInAcc_Click);
             this.label2EnterInAcc.MouseEnter += new System.EventHandler(this.label2EnterInAcc_MouseEnter);
@@ -510,24 +517,29 @@
             this.label1TextRestore.Location = new System.Drawing.Point(13, 0);
             this.label1TextRestore.Name = "label1TextRestore";
             this.label1TextRestore.Size = new System.Drawing.Size(221, 31);
-            this.label1TextRestore.TabIndex = 1;
+            this.label1TextRestore.TabIndex = 16;
             this.label1TextRestore.Text = "Восстановление";
             // 
             // guna2Button3Restore
             // 
+            this.guna2Button3Restore.Animated = true;
+            this.guna2Button3Restore.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this.guna2Button3Restore.BorderRadius = 12;
+            this.guna2Button3Restore.BorderThickness = 2;
             this.guna2Button3Restore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3Restore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3Restore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3Restore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3Restore.Enabled = false;
             this.guna2Button3Restore.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Button3Restore.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.guna2Button3Restore.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button3Restore.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3Restore.IndicateFocus = true;
             this.guna2Button3Restore.Location = new System.Drawing.Point(9, 207);
             this.guna2Button3Restore.Name = "guna2Button3Restore";
             this.guna2Button3Restore.Size = new System.Drawing.Size(285, 45);
-            this.guna2Button3Restore.TabIndex = 4;
+            this.guna2Button3Restore.TabIndex = 7;
             this.guna2Button3Restore.Text = "Восстановить пароль";
             this.guna2Button3Restore.Click += new System.EventHandler(this.guna2Button3Restore_Click);
             // 
@@ -555,8 +567,7 @@
             this.guna2TextBox6LoginRestore.PlaceholderText = "Имя пользователя";
             this.guna2TextBox6LoginRestore.SelectedText = "";
             this.guna2TextBox6LoginRestore.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox6LoginRestore.TabIndex = 2;
-            this.guna2TextBox6LoginRestore.TabStop = false;
+            this.guna2TextBox6LoginRestore.TabIndex = 5;
             this.guna2TextBox6LoginRestore.TextChanged += new System.EventHandler(this.guna2TextBox6LoginRestore_TextChanged);
             // 
             // guna2TextBox7KeywordRestore
@@ -583,8 +594,7 @@
             this.guna2TextBox7KeywordRestore.PlaceholderText = "Ключевое слово";
             this.guna2TextBox7KeywordRestore.SelectedText = "";
             this.guna2TextBox7KeywordRestore.Size = new System.Drawing.Size(285, 46);
-            this.guna2TextBox7KeywordRestore.TabIndex = 3;
-            this.guna2TextBox7KeywordRestore.TabStop = false;
+            this.guna2TextBox7KeywordRestore.TabIndex = 6;
             this.guna2TextBox7KeywordRestore.TextChanged += new System.EventHandler(this.guna2TextBox7KeywordRestore_TextChanged);
             // 
             // Form2Authorization

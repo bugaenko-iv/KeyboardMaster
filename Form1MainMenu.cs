@@ -34,6 +34,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void Form1MainMenu_Load(object sender, EventArgs e)
         {
             label1NameUserOrAdmin.Text = Class1InfoAboutUserOrAdmin.nameUser;
+
             isActiveLabel30Sec = true;
             seconds = 30;
             label1Timer.Text = seconds.ToString();
