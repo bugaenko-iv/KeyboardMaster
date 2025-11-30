@@ -199,6 +199,30 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void button1UpdateTargetText_Click(object sender, EventArgs e)
         {
             generationTargetText();
+
+            label1Timer.Visible = false;
+            timer1.Enabled = false;
+
+            if (isActiveLabel15Sec)
+            {
+                seconds = Convert.ToInt32(label1_15Sec.Text);
+                label1Timer.Text = seconds.ToString();
+            }
+            if (isActiveLabel30Sec)
+            {
+                seconds = Convert.ToInt32(label2_30Sec.Text);
+                label1Timer.Text = seconds.ToString();
+            }
+            if (isActiveLabel60Sec)
+            {
+                seconds = Convert.ToInt32(label3_60Sec.Text);
+                label1Timer.Text = seconds.ToString();
+            }
+            if (isActiveLabel120Sec)
+            {
+                seconds = Convert.ToInt32(label4_120Sec.Text);
+                label1Timer.Text = seconds.ToString();
+            }
         }
 
         private void button1UpdateTargetText_MouseEnter(object sender, EventArgs e)
