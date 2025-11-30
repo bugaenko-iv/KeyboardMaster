@@ -278,7 +278,6 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                     commandAddNewUser.Parameters.AddWithValue("@password", guna2TextBox4PasswordRegistr.Text);
                     commandAddNewUser.Parameters.AddWithValue("@keyword", guna2TextBox5KeywordRegistr.Text);
                     commandAddNewUser.ExecuteNonQuery();
-                    MessageBox.Show("Регистрация прошла успешно");
 
                     Form1MainMenu form1MainMenu = new Form1MainMenu();
                     this.Hide();
@@ -332,7 +331,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка, данных не существует");
+                    label1MessageText.Text = "неверный логин или пароль";
+                    guna2Panel4ForMessage.Visible = true;
                 }
             }
         }
@@ -363,7 +363,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка");
+                    label1MessageText.Text = "неверный логин или кл. слово";
+                    guna2Panel4ForMessage.Visible = true;
                 }
             }
         }
@@ -380,6 +381,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
             guna2TextBox1LoginAuth.Text = null;
             guna2TextBox2PasswordAuth.Text = null;
+
+            guna2Panel4ForMessage.Visible = false;
         }
 
         private void label1CreateNewAcc_Click(object sender, EventArgs e)
@@ -389,6 +392,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
             guna2TextBox1LoginAuth.Text = null;
             guna2TextBox2PasswordAuth.Text = null;
+
+            guna2Panel4ForMessage.Visible = false;
         }
 
         private void label1EnterInAcc_Click(object sender, EventArgs e)
@@ -408,6 +413,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
             guna2TextBox6LoginRestore.Text = null;
             guna2TextBox7KeywordRestore.Text = null;
+
+            guna2Panel4ForMessage.Visible = false;
         }
 
         #endregion
@@ -453,6 +460,16 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         private void label2EnterInAcc_MouseLeave(object sender, EventArgs e)
         {
             label2EnterInAcc.ForeColor = Color.DarkGray;
+        }
+
+        #endregion
+
+
+        #region Скрытые оповещения об ошибке
+
+        private void label1CloseMessage_Click(object sender, EventArgs e)
+        {
+            guna2Panel4ForMessage.Visible = false;
         }
 
         #endregion

@@ -58,6 +58,9 @@
             this.guna2Button3Restore = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox6LoginRestore = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox7KeywordRestore = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel4ForMessage = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1MessageText = new System.Windows.Forms.Label();
+            this.label1CloseMessage = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.panel1ForAuth.SuspendLayout();
@@ -68,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2HidePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2ShowPassword)).BeginInit();
             this.panel3ForRestorePassword.SuspendLayout();
+            this.guna2Panel4ForMessage.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -188,7 +192,6 @@
             // 
             // guna2Button1Auth
             // 
-            this.guna2Button1Auth.Animated = true;
             this.guna2Button1Auth.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this.guna2Button1Auth.BorderRadius = 12;
             this.guna2Button1Auth.BorderThickness = 2;
@@ -597,6 +600,42 @@
             this.guna2TextBox7KeywordRestore.TabIndex = 6;
             this.guna2TextBox7KeywordRestore.TextChanged += new System.EventHandler(this.guna2TextBox7KeywordRestore_TextChanged);
             // 
+            // guna2Panel4ForMessage
+            // 
+            this.guna2Panel4ForMessage.BorderRadius = 7;
+            this.guna2Panel4ForMessage.Controls.Add(this.label1CloseMessage);
+            this.guna2Panel4ForMessage.Controls.Add(this.label1MessageText);
+            this.guna2Panel4ForMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this.guna2Panel4ForMessage.Location = new System.Drawing.Point(554, 586);
+            this.guna2Panel4ForMessage.Name = "guna2Panel4ForMessage";
+            this.guna2Panel4ForMessage.Size = new System.Drawing.Size(285, 43);
+            this.guna2Panel4ForMessage.TabIndex = 11;
+            this.guna2Panel4ForMessage.Visible = false;
+            // 
+            // label1MessageText
+            // 
+            this.label1MessageText.BackColor = System.Drawing.Color.Transparent;
+            this.label1MessageText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1MessageText.ForeColor = System.Drawing.Color.Salmon;
+            this.label1MessageText.Location = new System.Drawing.Point(31, 12);
+            this.label1MessageText.Name = "label1MessageText";
+            this.label1MessageText.Size = new System.Drawing.Size(225, 23);
+            this.label1MessageText.TabIndex = 0;
+            this.label1MessageText.Text = "неверный логин или пароль";
+            this.label1MessageText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1CloseMessage
+            // 
+            this.label1CloseMessage.AutoSize = true;
+            this.label1CloseMessage.BackColor = System.Drawing.Color.Transparent;
+            this.label1CloseMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1CloseMessage.Location = new System.Drawing.Point(256, 12);
+            this.label1CloseMessage.Name = "label1CloseMessage";
+            this.label1CloseMessage.Size = new System.Drawing.Size(17, 17);
+            this.label1CloseMessage.TabIndex = 12;
+            this.label1CloseMessage.Text = "X";
+            this.label1CloseMessage.Click += new System.EventHandler(this.label1CloseMessage_Click);
+            // 
             // Form2Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,6 +643,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1389, 795);
+            this.Controls.Add(this.guna2Panel4ForMessage);
             this.Controls.Add(this.panel3ForRestorePassword);
             this.Controls.Add(this.panel2ForRegistr);
             this.Controls.Add(this.panel1ForAuth);
@@ -629,6 +669,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2ShowPassword)).EndInit();
             this.panel3ForRestorePassword.ResumeLayout(false);
             this.panel3ForRestorePassword.PerformLayout();
+            this.guna2Panel4ForMessage.ResumeLayout(false);
+            this.guna2Panel4ForMessage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -664,6 +706,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3Restore;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6LoginRestore;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7KeywordRestore;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4ForMessage;
+        private System.Windows.Forms.Label label1MessageText;
+        private System.Windows.Forms.Label label1CloseMessage;
     }
 }
 
