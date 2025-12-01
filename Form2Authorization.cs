@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -16,6 +17,9 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
 
         bool isLeftMouseDown;
+        bool isLoginRegCorrect, isPasswordRegCorrect, isKeywordRegCorrect;
+        string latinOnlyPattern = @"^[a-zA-Z]+$";
+        string latinAndDigitOnlyPattern = @"^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$";
         Point startPoint;
 
         public Form2Authorization()
@@ -37,6 +41,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             guna2PictureBox2HidePassword.Location = new Point(253, 133); // Для регистрации
             panel2ForRegistr.Location = new Point(545, 228); // Для панели регистрации
             panel3ForRestorePassword.Location = new Point(545, 228); // Для панели восстановления пароля
+            guna2Panel4ForMessage.Location = new Point(554, 558);
         }
 
         #region Граница формы
@@ -153,7 +158,16 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2TextBox3LoginRegistr_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(guna2TextBox3LoginRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox4PasswordRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox5KeywordRegistr.Text))
+            if (guna2TextBox3LoginRegistr.TextLength >= 5 && Regex.IsMatch(guna2TextBox3LoginRegistr.Text, latinOnlyPattern))
+            {
+                isLoginRegCorrect = true;
+            }
+            else
+            {
+                isLoginRegCorrect = false;
+            }
+
+            if (isLoginRegCorrect && isPasswordRegCorrect && isKeywordRegCorrect)
             {
                 guna2Button2Registr.Enabled = true;
             }
@@ -165,7 +179,16 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2TextBox4PasswordRegistr_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(guna2TextBox3LoginRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox4PasswordRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox5KeywordRegistr.Text))
+            if (guna2TextBox4PasswordRegistr.TextLength >= 8 && Regex.IsMatch(guna2TextBox4PasswordRegistr.Text, latinAndDigitOnlyPattern))
+            {
+                isPasswordRegCorrect = true;
+            }
+            else
+            {
+                isPasswordRegCorrect = false;
+            }
+
+            if (isLoginRegCorrect && isPasswordRegCorrect && isKeywordRegCorrect)
             {
                 guna2Button2Registr.Enabled = true;
             }
@@ -177,7 +200,16 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 
         private void guna2TextBox5KeywordRegistr_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(guna2TextBox3LoginRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox4PasswordRegistr.Text) && !string.IsNullOrEmpty(guna2TextBox5KeywordRegistr.Text))
+            if (guna2TextBox5KeywordRegistr.TextLength >= 3 && Regex.IsMatch(guna2TextBox5KeywordRegistr.Text, latinOnlyPattern))
+            {
+                isKeywordRegCorrect = true;
+            }
+            else
+            {
+                isKeywordRegCorrect = false;
+            }
+
+            if (isLoginRegCorrect && isPasswordRegCorrect && isKeywordRegCorrect)
             {
                 guna2Button2Registr.Enabled = true;
             }
@@ -272,16 +304,35 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 {
                     connection.Open();
 
-                    string addNewUserQuery = "insert into users (login, password, keyword) values (@login, @password, @keyword)";
-                    MySqlCommand commandAddNewUser = new MySqlCommand(addNewUserQuery, connection);
-                    commandAddNewUser.Parameters.AddWithValue("@login", guna2TextBox3LoginRegistr.Text);
-                    commandAddNewUser.Parameters.AddWithValue("@password", guna2TextBox4PasswordRegistr.Text);
-                    commandAddNewUser.Parameters.AddWithValue("@keyword", guna2TextBox5KeywordRegistr.Text);
-                    commandAddNewUser.ExecuteNonQuery();
+                    string loginSearchQuery = "select login from users where login = @login";
+                    MySqlCommand commandLoginSearch = new MySqlCommand(loginSearchQuery, connection);
+                    commandLoginSearch.Parameters.AddWithValue("@login", guna2TextBox3LoginRegistr.Text);
+                    object login = commandLoginSearch.ExecuteScalar();
 
-                    Form1MainMenu form1MainMenu = new Form1MainMenu();
-                    this.Hide();
-                    form1MainMenu.Show();
+                    if (login != null)
+                    {
+                        guna2Panel4ForMessage.Location = new Point(554, 599);
+                        label1MessageText.Text = "логин занят пользователем";
+                        guna2Panel4ForMessage.Visible = true;
+                    }
+                    else
+                    {
+                        string addNewUserQuery = "insert into users (login, password, keyword) values (@login, @password, @keyword)";
+                        MySqlCommand commandAddNewUser = new MySqlCommand(addNewUserQuery, connection);
+                        commandAddNewUser.Parameters.AddWithValue("@login", guna2TextBox3LoginRegistr.Text);
+                        commandAddNewUser.Parameters.AddWithValue("@password", guna2TextBox4PasswordRegistr.Text);
+                        commandAddNewUser.Parameters.AddWithValue("@keyword", guna2TextBox5KeywordRegistr.Text);
+                        commandAddNewUser.ExecuteNonQuery();
+
+                        panel2ForRegistr.Visible = false;
+                        panel1ForAuth.Visible = true;
+
+                        guna2TextBox3LoginRegistr.Text = null;
+                        guna2TextBox4PasswordRegistr.Text = null;
+                        guna2TextBox5KeywordRegistr.Text = null;
+
+                        guna2Panel4ForMessage.Visible = false;
+                    }
                 }
                 catch (Exception ex) 
                 {
@@ -331,6 +382,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 }
                 else
                 {
+                    guna2Panel4ForMessage.Location = new Point(554, 558);
                     label1MessageText.Text = "неверный логин или пароль";
                     guna2Panel4ForMessage.Visible = true;
                 }
@@ -363,6 +415,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 }
                 else
                 {
+                    guna2Panel4ForMessage.Location = new Point(554, 558);
                     label1MessageText.Text = "неверный логин или кл. слово";
                     guna2Panel4ForMessage.Visible = true;
                 }
@@ -404,6 +457,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             guna2TextBox3LoginRegistr.Text = null;
             guna2TextBox4PasswordRegistr.Text = null;
             guna2TextBox5KeywordRegistr.Text = null;
+
+            guna2Panel4ForMessage.Visible = false;
         }
 
         private void label2EnterInAcc_Click(object sender, EventArgs e)

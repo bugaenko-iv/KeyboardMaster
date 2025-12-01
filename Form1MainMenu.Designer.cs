@@ -46,6 +46,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1Timer = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6_Words = new System.Windows.Forms.Label();
             this.label5_Time = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -53,8 +55,6 @@
             this.label3_60Sec = new System.Windows.Forms.Label();
             this.label2_30Sec = new System.Windows.Forms.Label();
             this.label1_15Sec = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.guna2Panel1SpeedMenu.SuspendLayout();
@@ -144,9 +144,9 @@
             // 
             this.label1NameUserOrAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label1NameUserOrAdmin.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1NameUserOrAdmin.Location = new System.Drawing.Point(1076, 83);
+            this.label1NameUserOrAdmin.Location = new System.Drawing.Point(1013, 83);
             this.label1NameUserOrAdmin.Name = "label1NameUserOrAdmin";
-            this.label1NameUserOrAdmin.Size = new System.Drawing.Size(233, 23);
+            this.label1NameUserOrAdmin.Size = new System.Drawing.Size(296, 23);
             this.label1NameUserOrAdmin.TabIndex = 10;
             this.label1NameUserOrAdmin.Text = "NameUserOrAdmin";
             this.label1NameUserOrAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -310,6 +310,28 @@
             this.guna2Panel1.Size = new System.Drawing.Size(504, 41);
             this.guna2Panel1.TabIndex = 18;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(414, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "обучение";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(325, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "тренажер";
+            // 
             // label6_Words
             // 
             this.label6_Words.AutoSize = true;
@@ -397,28 +419,6 @@
             this.label1_15Sec.Click += new System.EventHandler(this.label1_15Sec_Click);
             this.label1_15Sec.MouseEnter += new System.EventHandler(this.label1_15Sec_MouseEnter);
             this.label1_15Sec.MouseLeave += new System.EventHandler(this.label1_15Sec_MouseLeave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(325, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "тренажер";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(414, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "обучение";
             // 
             // Form1MainMenu
             // 
