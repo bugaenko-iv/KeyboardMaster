@@ -18,8 +18,17 @@ password varchar(100),
 keyword varchar(100)
 );
 
+insert into users values
+(1, "IvanBug", "Aris444741032", "cat"),
+(2, "EgorD", "Shanti12345", "dog"),
+(3, "Ermol", "MakanTop123", "rap"),
+(4, "ChichukBasket", "1Lakers2", "nba");
+
 insert into admin values
-(1, "admin", "Aris444741032", "cat");
+(1, "Admin", "Aris444741032", "cat");
+
+drop table users;
+drop table admin;
 
 select * from users;
 select * from admin;

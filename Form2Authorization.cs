@@ -312,6 +312,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                     if (login != null)
                     {
                         guna2Panel4ForMessage.Location = new Point(554, 599);
+                        label1MessageText.ForeColor = Color.Salmon;
                         label1MessageText.Text = "логин занят пользователем";
                         guna2Panel4ForMessage.Visible = true;
                     }
@@ -327,11 +328,14 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                         panel2ForRegistr.Visible = false;
                         panel1ForAuth.Visible = true;
 
+                        label1MessageText.Text = "регистрация прошла успешно";
+                        label1MessageText.ForeColor = Color.YellowGreen;
+                        guna2Panel4ForMessage.Location = new Point(554, 558);
+                        guna2Panel4ForMessage.Visible = true;
+
                         guna2TextBox3LoginRegistr.Text = null;
                         guna2TextBox4PasswordRegistr.Text = null;
                         guna2TextBox5KeywordRegistr.Text = null;
-
-                        guna2Panel4ForMessage.Visible = false;
                     }
                 }
                 catch (Exception ex) 
@@ -383,6 +387,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 else
                 {
                     guna2Panel4ForMessage.Location = new Point(554, 558);
+                    label1MessageText.ForeColor = Color.Salmon;
                     label1MessageText.Text = "неверный логин или пароль";
                     guna2Panel4ForMessage.Visible = true;
                 }
@@ -416,6 +421,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 else
                 {
                     guna2Panel4ForMessage.Location = new Point(554, 558);
+                    label1MessageText.ForeColor = Color.Salmon;
                     label1MessageText.Text = "неверный логин или кл. слово";
                     guna2Panel4ForMessage.Visible = true;
                 }
