@@ -12,6 +12,9 @@ namespace Клавиатурный_тренажер_KeyboardMaster
 {
     public partial class Form1MainMenu : Form
     {
+
+        //Проверка
+
         Point startPoint;
         bool isLeftMouseDown;
         bool isActiveModeTime, isActiveLabel15Sec, isActiveLabel30Sec, isActiveLabel60Sec, isActiveLabel120Sec;
