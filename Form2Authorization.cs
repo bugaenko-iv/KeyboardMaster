@@ -417,6 +417,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                     panel1ForAuth.Visible = true;
 
                     guna2TextBox2PasswordAuth.Text = userPassword.ToString();
+
+                    guna2Panel4ForMessage.Visible = false;
                 }
                 else
                 {

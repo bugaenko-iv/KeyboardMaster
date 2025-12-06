@@ -14,10 +14,11 @@ namespace Клавиатурный_тренажер_KeyboardMaster
     {
         Point startPoint;
         bool isLeftMouseDown;
-        bool isActiveLabel15Sec, isActiveLabel30Sec, isActiveLabel60Sec, isActiveLabel120Sec;
+        bool isActiveModeTime, isActiveLabel15Sec, isActiveLabel30Sec, isActiveLabel60Sec, isActiveLabel120Sec;
+        bool isActiveModeWord;
         int countMistake = 0;
         int targetIndex;
-        int seconds = 0;
+        int seconds = 0, words = 0;
         string[] arrayText = {"и", "в", "не", "он", "на", "я", "что", "тот", "быть", "с", "а", "весь", "это", "как", "она", "по", "но", "они", "к", "у", "ты", "из", "мы", "за", "вы", "так", "же", "от", "сказать", "этот", "который", "мочь", "человек", "о", "один", "еще", "бы", "такой", "только", "себя", "свое", "какой", "когда", "уже", "для", "вот", "кто", "да", "говорить", "год", "знать", "можно", "статья", "если", "очень", "ну", "вот", "потом", "дело", "жизнь", "первый", "день", "тут", "во", "ничто", "очень", "со", "хотеть", "ли", "при", "голова", "надо", "без", "видеть", "идти", "теперь", "тоже", "стоять", "друг", "дом", "теперь", "можно", "после", "здесь", "думать", "место", "лицо", "друг", "жить", "делать", "через", "общий", "знать", "новый", "два", "видеть", "идти", "один", "под", "где", "потом", "делать", "два", "при", "мой", "идти", "хотеть", "жить", "работа", "рука", "раз", "слово", "солнце", "море", "ветер", "небо", "земля", "свет", "трава", "звезда", "дождь", "огонь", "река", "утро", "вечер", "ночь", "звук", "цвет", "вкус", "запах", "чувство", "радость", "печаль", "надежда", "вера", "любовь", "смерть", "время", "путь", "сила", "мир", "красота", "правда", "ложь", "ум", "душа", "тело", "сердце", "мысль", "давать", "нога", "книга", "писать", "читать", "учить", "студент", "учитель", "класс", "урок", "задание", "ответ", "вопрос", "причина", "следствие", "результат", "процесс", "метод", "способ", "пример", "правило", "исключение", "структура", "элемент", "функция", "задача", "решение", "проблема", "сложность", "легкость", "быстро", "медленно", "громко", "тихо", "высоко", "низко", "далеко", "близко", "внутри", "наружи", "слева", "справа", "вперед", "назад", "вверх", "вниз", "всегда", "никогда", "часто", "редко", "иногда", "обычно", "везде", "начинать", "получать", "делать", "смотреть", "думать", "ждать", "искать", "находить", "создавать", "использовать", "понимать", "чувствовать", "помнить", "забывать", "менять", "оставаться", "появляться", "исчезать", "расти", "падать", "лежать", "стоять", "сидеть", "бежать", "лететь", "плыть", "идти", "ехать", "возвращаться", "приходить", "уходить", "заходить", "выходить", "входить", "лежать", "сидеть", "стоять", "висеть", "лежать", "стоять", "сидеть", "смотреть", "слушать", "говорить", "писать", "читать", "учить", "работать", "отдыхать", "спать", "есть", "пить", "дышать", "жить", "умирать", "рождаться", "расти", "стареть", "выздоравливать", "улыбаться", "плакать", "смеяться", "грустить", "злиться", "радоваться", "удивляться", "бояться", "надеяться", "верить", "любить", "ненавидеть", "просить", "давать", "брать", "отдавать", "принимать", "отправлять", "получать", "делать", "создавать", "использовать", "применять", "строить", "разрушать", "открывать", "закрывать", "начинать", "заканчивать", "продолжать", "останавливаться", "двигаться", "спешить", "литьмед", "торопиться", "опаздывать", "успевать", "готовить", "варить", "жарить", "печь", "резать", "чистить", "мыть", "сушить", "гладить", "стирать", "убирать", "ремонтировать", "чинить"};
         string targetText;
 
@@ -35,6 +36,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             label1NameUserOrAdmin.Text = Class1InfoAboutUserOrAdmin.nameUser;
 
+            isActiveModeTime = true;
             isActiveLabel30Sec = true;
             seconds = 30;
             label1Timer.Text = seconds.ToString();
@@ -426,6 +428,14 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label3_60Sec.ForeColor = Color.DarkGray;
             isActiveLabel120Sec = false;
             label4_120Sec.ForeColor = Color.DarkGray;
+
+            if (timer1.Enabled == true)
+            {
+                generationTargetText();
+
+                label1Timer.Visible = false;
+                timer1.Enabled = false;
+            }
         }
 
         private void label2_30Sec_Click(object sender, EventArgs e) //label30
@@ -442,6 +452,14 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label3_60Sec.ForeColor = Color.DarkGray;
             isActiveLabel120Sec = false;
             label4_120Sec.ForeColor = Color.DarkGray;
+
+            if (timer1.Enabled == true)
+            {
+                generationTargetText();
+
+                label1Timer.Visible = false;
+                timer1.Enabled = false;
+            }
         }
 
         private void label3_60Sec_Click(object sender, EventArgs e) //label60
@@ -458,6 +476,14 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label2_30Sec.ForeColor = Color.DarkGray;
             isActiveLabel120Sec = false;
             label4_120Sec.ForeColor = Color.DarkGray;
+
+            if (timer1.Enabled == true)
+            {
+                generationTargetText();
+
+                label1Timer.Visible = false;
+                timer1.Enabled = false;
+            }
         }
 
         private void label4_120Sec_Click(object sender, EventArgs e) //label120
@@ -474,6 +500,89 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label2_30Sec.ForeColor = Color.DarkGray;
             isActiveLabel60Sec = false;
             label3_60Sec.ForeColor = Color.DarkGray;
+
+            if (timer1.Enabled == true)
+            {
+                generationTargetText();
+
+                label1Timer.Visible = false;
+                timer1.Enabled = false;
+            }
+        }
+
+        #endregion
+
+
+        #region Переключение между режимами и анимация кнопок "время" и "слова"
+
+        private void label5_Time_Click(object sender, EventArgs e)
+        {
+            isActiveModeTime = true;
+            isActiveModeWord = false;
+
+            label5_Time.ForeColor = Color.FromArgb(226, 183, 20);
+            label6_Words.ForeColor = Color.DarkGray;
+
+            label1_10Wor.Visible = false;
+            label2_25Wor.Visible = false;
+            label3_50Wor.Visible = false;
+            label4_100Wor.Visible = false;
+
+            label1_15Sec.Visible = true;
+            label2_30Sec.Visible = true;
+            label3_60Sec.Visible = true;
+            label4_120Sec.Visible = true;
+        }
+
+        private void label5_Time_MouseEnter(object sender, EventArgs e)
+        {
+            if (!isActiveModeTime)
+            {
+                label5_Time.ForeColor = Color.White;
+            }
+        }
+
+        private void label5_Time_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveModeTime)
+            {
+                label5_Time.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label6_Words_Click(object sender, EventArgs e)
+        {
+            isActiveModeWord = true;
+            isActiveModeTime = false;
+
+            label6_Words.ForeColor = Color.FromArgb(226, 183, 20);
+            label5_Time.ForeColor = Color.DarkGray;
+
+            label1_15Sec.Visible = false;
+            label2_30Sec.Visible = false;
+            label3_60Sec.Visible = false;
+            label4_120Sec.Visible = false;
+
+            label1_10Wor.Visible = true;
+            label2_25Wor.Visible = true;
+            label3_50Wor.Visible = true;
+            label4_100Wor.Visible = true;
+        }
+
+        private void label6_Words_MouseEnter(object sender, EventArgs e)
+        {
+            if (!isActiveModeWord)
+            {
+                label6_Words.ForeColor = Color.White;
+            }
+        }
+
+        private void label6_Words_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveModeWord)
+            {
+                label6_Words.ForeColor = Color.DarkGray;
+            }
         }
 
         #endregion
