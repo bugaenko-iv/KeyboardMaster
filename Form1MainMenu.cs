@@ -15,7 +15,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         Point startPoint;
         bool isLeftMouseDown;
         bool isActiveModeTime, isActiveLabel15Sec, isActiveLabel30Sec, isActiveLabel60Sec, isActiveLabel120Sec;
-        bool isActiveModeWord;
+        bool isActiveModeWord, isActiveLabel10Wor, isActiveLabel25Wor, isActiveLabel50Wor, isActiveLabel100Wor;
         int countMistake = 0;
         int targetIndex;
         int seconds = 0, words = 0;
@@ -567,6 +567,14 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label2_25Wor.Visible = true;
             label3_50Wor.Visible = true;
             label4_100Wor.Visible = true;
+
+            isActiveLabel25Wor = true;
+
+            if (timer1.Enabled == true)
+            {
+                label1Timer.Visible = false;
+                timer1.Enabled = false;
+            }
         }
 
         private void label6_Words_MouseEnter(object sender, EventArgs e)
@@ -583,6 +591,127 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             {
                 label6_Words.ForeColor = Color.DarkGray;
             }
+        }
+
+        #endregion
+
+
+        #region Анимация кнопок и выбор кол-во слов для ввода
+
+        private void label1_10Wor_MouseEnter(object sender, EventArgs e) //label10
+        {
+            if (!isActiveLabel10Wor)
+            {
+                label1_10Wor.ForeColor = Color.White;
+            }
+        }
+
+        private void label1_10Wor_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel10Wor)
+            {
+                label1_10Wor.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label2_25Wor_MouseEnter(object sender, EventArgs e) //label25
+        {
+            if (!isActiveLabel25Wor)
+            {
+                label2_25Wor.ForeColor = Color.White;
+            }
+        }
+
+        private void label2_25Wor_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel25Wor)
+            {
+                label2_25Wor.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label3_50Wor_MouseEnter(object sender, EventArgs e) //label50
+        {
+            if (!isActiveLabel50Wor)
+            {
+                label3_50Wor.ForeColor = Color.White;
+            }
+        }
+
+        private void label3_50Wor_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel50Wor)
+            {
+                label3_50Wor.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label4_100Wor_MouseEnter(object sender, EventArgs e) //label100
+        {
+            if (!isActiveLabel100Wor)
+            {
+                label4_100Wor.ForeColor = Color.White;
+            }
+        }
+
+        private void label4_100Wor_MouseLeave(object sender, EventArgs e)
+        {
+            if (!isActiveLabel100Wor)
+            {
+                label4_100Wor.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void label1_10Wor_Click(object sender, EventArgs e) //label10
+        {
+            isActiveLabel10Wor = true;
+            label1_10Wor.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel25Wor = false;
+            label2_25Wor.ForeColor = Color.DarkGray;
+            isActiveLabel50Wor = false;
+            label3_50Wor.ForeColor = Color.DarkGray;
+            isActiveLabel100Wor = false;
+            label4_100Wor.ForeColor = Color.DarkGray;
+        }
+
+        private void label2_25Wor_Click(object sender, EventArgs e) //label25
+        {
+            isActiveLabel25Wor = true;
+            label2_25Wor.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel10Wor = false;
+            label1_10Wor.ForeColor = Color.DarkGray;
+            isActiveLabel50Wor = false;
+            label3_50Wor.ForeColor = Color.DarkGray;
+            isActiveLabel100Wor = false;
+            label4_100Wor.ForeColor = Color.DarkGray;
+        }
+
+        private void label3_50Wor_Click(object sender, EventArgs e) //label50
+        {
+            isActiveLabel50Wor = true;
+            label3_50Wor.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel10Wor = false;
+            label1_10Wor.ForeColor = Color.DarkGray;
+            isActiveLabel25Wor = false;
+            label2_25Wor.ForeColor = Color.DarkGray;
+            isActiveLabel100Wor = false;
+            label4_100Wor.ForeColor = Color.DarkGray;
+        }
+
+        private void label4_100Wor_Click(object sender, EventArgs e) //label100
+        {
+            isActiveLabel100Wor = true;
+            label4_100Wor.ForeColor = Color.FromArgb(226, 183, 20);
+
+            isActiveLabel10Wor = false;
+            label1_10Wor.ForeColor = Color.DarkGray;
+            isActiveLabel25Wor = false;
+            label2_25Wor.ForeColor = Color.DarkGray;
+            isActiveLabel50Wor = false;
+            label3_50Wor.ForeColor = Color.DarkGray;
         }
 
         #endregion

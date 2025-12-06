@@ -345,6 +345,9 @@
             this.label4_100Wor.TabIndex = 31;
             this.label4_100Wor.Text = "100";
             this.label4_100Wor.Visible = false;
+            this.label4_100Wor.Click += new System.EventHandler(this.label4_100Wor_Click);
+            this.label4_100Wor.MouseEnter += new System.EventHandler(this.label4_100Wor_MouseEnter);
+            this.label4_100Wor.MouseLeave += new System.EventHandler(this.label4_100Wor_MouseLeave);
             // 
             // label2
             // 
@@ -382,6 +385,9 @@
             this.label3_50Wor.TabIndex = 30;
             this.label3_50Wor.Text = "50";
             this.label3_50Wor.Visible = false;
+            this.label3_50Wor.Click += new System.EventHandler(this.label3_50Wor_Click);
+            this.label3_50Wor.MouseEnter += new System.EventHandler(this.label3_50Wor_MouseEnter);
+            this.label3_50Wor.MouseLeave += new System.EventHandler(this.label3_50Wor_MouseLeave);
             // 
             // label6_Words
             // 
@@ -425,6 +431,9 @@
             this.label2_25Wor.TabIndex = 29;
             this.label2_25Wor.Text = "25";
             this.label2_25Wor.Visible = false;
+            this.label2_25Wor.Click += new System.EventHandler(this.label2_25Wor_Click);
+            this.label2_25Wor.MouseEnter += new System.EventHandler(this.label2_25Wor_MouseEnter);
+            this.label2_25Wor.MouseLeave += new System.EventHandler(this.label2_25Wor_MouseLeave);
             // 
             // guna2Panel2
             // 
@@ -464,6 +473,9 @@
             this.label1_10Wor.TabIndex = 28;
             this.label1_10Wor.Text = "10";
             this.label1_10Wor.Visible = false;
+            this.label1_10Wor.Click += new System.EventHandler(this.label1_10Wor_Click);
+            this.label1_10Wor.MouseEnter += new System.EventHandler(this.label1_10Wor_MouseEnter);
+            this.label1_10Wor.MouseLeave += new System.EventHandler(this.label1_10Wor_MouseLeave);
             // 
             // label3_60Sec
             // 
