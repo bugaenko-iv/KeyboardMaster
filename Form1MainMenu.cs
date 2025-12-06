@@ -13,7 +13,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
     public partial class Form1MainMenu : Form
     {
 
-        //Проверка
+        //Проверка #2
 
         Point startPoint;
         bool isLeftMouseDown;
