@@ -124,7 +124,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             if (targetIndex < targetText.Length)
             {
-                if (timer1.Enabled == false)
+                if (timer1.Enabled == false && isActiveModeTime)
                 {
                     label1Timer.Visible = true;
                     timer1.Enabled = true;
@@ -332,9 +332,6 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             Application.Restart();
         }
 
-
-
-
         #endregion
 
 
@@ -353,11 +350,6 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             richTextBox1Typing.Select(targetIndex, 1);
             richTextBox1Typing.SelectionColor = Color.White;
         }
-
-
-
-
-
 
         #endregion
 
