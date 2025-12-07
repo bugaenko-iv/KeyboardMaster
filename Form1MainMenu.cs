@@ -179,12 +179,26 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             Random random = new Random();
             int countIteration = 0;
 
-            while (countIteration < arrayText.Length)
+            if (isActiveModeTime)
             {
-                int indexSymbol = random.Next(0, arrayText.Length);
-                targetText += arrayText[indexSymbol] + " ";
+                while (countIteration < arrayText.Length)
+                {
+                    int indexSymbol = random.Next(0, arrayText.Length);
+                    targetText += arrayText[indexSymbol] + " ";
 
-                countIteration++;
+                    countIteration++;
+                }
+            }
+
+            if (isActiveModeWord)
+            {
+                while (countIteration < words)
+                {
+                    int indexSymbol = random.Next(0, arrayText.Length);
+                    targetText += arrayText[indexSymbol] + " ";
+
+                    countIteration++;
+                }
             }
 
             richTextBox1Typing.Text = targetText;
@@ -532,6 +546,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label2_30Sec.Visible = true;
             label3_60Sec.Visible = true;
             label4_120Sec.Visible = true;
+
+            generationTargetText();
         }
 
         private void label5_Time_MouseEnter(object sender, EventArgs e)
@@ -569,6 +585,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label4_100Wor.Visible = true;
 
             isActiveLabel25Wor = true;
+            words = Convert.ToInt32(label2_25Wor.Text);
+            generationTargetText();
 
             if (timer1.Enabled == true)
             {
@@ -666,6 +684,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             isActiveLabel10Wor = true;
             label1_10Wor.ForeColor = Color.FromArgb(226, 183, 20);
+            words = Convert.ToInt32(label1_10Wor.Text);
+            generationTargetText();
 
             isActiveLabel25Wor = false;
             label2_25Wor.ForeColor = Color.DarkGray;
@@ -679,6 +699,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             isActiveLabel25Wor = true;
             label2_25Wor.ForeColor = Color.FromArgb(226, 183, 20);
+            words = Convert.ToInt32(label2_25Wor.Text);
+            generationTargetText();
 
             isActiveLabel10Wor = false;
             label1_10Wor.ForeColor = Color.DarkGray;
@@ -692,6 +714,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             isActiveLabel50Wor = true;
             label3_50Wor.ForeColor = Color.FromArgb(226, 183, 20);
+            words = Convert.ToInt32(label3_50Wor.Text);
+            generationTargetText();
 
             isActiveLabel10Wor = false;
             label1_10Wor.ForeColor = Color.DarkGray;
@@ -705,6 +729,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             isActiveLabel100Wor = true;
             label4_100Wor.ForeColor = Color.FromArgb(226, 183, 20);
+            words = Convert.ToInt32(label4_100Wor.Text);
+            generationTargetText();
 
             isActiveLabel10Wor = false;
             label1_10Wor.ForeColor = Color.DarkGray;
@@ -715,6 +741,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         }
 
         #endregion
+
 
     }
 }
