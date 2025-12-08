@@ -59,12 +59,20 @@
             this.label3_60Sec = new System.Windows.Forms.Label();
             this.label2_30Sec = new System.Windows.Forms.Label();
             this.label1_15Sec = new System.Windows.Forms.Label();
+            this.panel2Result = new System.Windows.Forms.Panel();
+            this.label8CountMistake = new System.Windows.Forms.Label();
+            this.label7Mistake = new System.Windows.Forms.Label();
+            this.label6AccuracyPer = new System.Windows.Forms.Label();
+            this.label5Accuracy = new System.Windows.Forms.Label();
+            this.label4CountWordMin = new System.Windows.Forms.Label();
+            this.label3WordMin = new System.Windows.Forms.Label();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.guna2Panel1SpeedMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.panel2Result.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -522,6 +530,86 @@
             this.label1_15Sec.MouseEnter += new System.EventHandler(this.label1_15Sec_MouseEnter);
             this.label1_15Sec.MouseLeave += new System.EventHandler(this.label1_15Sec_MouseLeave);
             // 
+            // panel2Result
+            // 
+            this.panel2Result.Controls.Add(this.label8CountMistake);
+            this.panel2Result.Controls.Add(this.label7Mistake);
+            this.panel2Result.Controls.Add(this.label6AccuracyPer);
+            this.panel2Result.Controls.Add(this.label5Accuracy);
+            this.panel2Result.Controls.Add(this.label4CountWordMin);
+            this.panel2Result.Controls.Add(this.label3WordMin);
+            this.panel2Result.Location = new System.Drawing.Point(640, 748);
+            this.panel2Result.Name = "panel2Result";
+            this.panel2Result.Size = new System.Drawing.Size(623, 118);
+            this.panel2Result.TabIndex = 19;
+            this.panel2Result.Visible = false;
+            // 
+            // label8CountMistake
+            // 
+            this.label8CountMistake.AutoSize = true;
+            this.label8CountMistake.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label8CountMistake.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(183)))), ((int)(((byte)(20)))));
+            this.label8CountMistake.Location = new System.Drawing.Point(437, 56);
+            this.label8CountMistake.Name = "label8CountMistake";
+            this.label8CountMistake.Size = new System.Drawing.Size(26, 29);
+            this.label8CountMistake.TabIndex = 5;
+            this.label8CountMistake.Text = "0";
+            // 
+            // label7Mistake
+            // 
+            this.label7Mistake.AutoSize = true;
+            this.label7Mistake.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label7Mistake.ForeColor = System.Drawing.Color.DarkGray;
+            this.label7Mistake.Location = new System.Drawing.Point(437, 20);
+            this.label7Mistake.Name = "label7Mistake";
+            this.label7Mistake.Size = new System.Drawing.Size(148, 25);
+            this.label7Mistake.TabIndex = 4;
+            this.label7Mistake.Text = "кол-во ошибок";
+            // 
+            // label6AccuracyPer
+            // 
+            this.label6AccuracyPer.AutoSize = true;
+            this.label6AccuracyPer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label6AccuracyPer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(183)))), ((int)(((byte)(20)))));
+            this.label6AccuracyPer.Location = new System.Drawing.Point(219, 56);
+            this.label6AccuracyPer.Name = "label6AccuracyPer";
+            this.label6AccuracyPer.Size = new System.Drawing.Size(26, 29);
+            this.label6AccuracyPer.TabIndex = 3;
+            this.label6AccuracyPer.Text = "0";
+            // 
+            // label5Accuracy
+            // 
+            this.label5Accuracy.AutoSize = true;
+            this.label5Accuracy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label5Accuracy.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5Accuracy.Location = new System.Drawing.Point(219, 20);
+            this.label5Accuracy.Name = "label5Accuracy";
+            this.label5Accuracy.Size = new System.Drawing.Size(161, 25);
+            this.label5Accuracy.TabIndex = 2;
+            this.label5Accuracy.Text = "аккуратность %";
+            // 
+            // label4CountWordMin
+            // 
+            this.label4CountWordMin.AutoSize = true;
+            this.label4CountWordMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label4CountWordMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(183)))), ((int)(((byte)(20)))));
+            this.label4CountWordMin.Location = new System.Drawing.Point(20, 56);
+            this.label4CountWordMin.Name = "label4CountWordMin";
+            this.label4CountWordMin.Size = new System.Drawing.Size(26, 29);
+            this.label4CountWordMin.TabIndex = 1;
+            this.label4CountWordMin.Text = "0";
+            // 
+            // label3WordMin
+            // 
+            this.label3WordMin.AutoSize = true;
+            this.label3WordMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label3WordMin.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3WordMin.Location = new System.Drawing.Point(20, 20);
+            this.label3WordMin.Name = "label3WordMin";
+            this.label3WordMin.Size = new System.Drawing.Size(144, 25);
+            this.label3WordMin.TabIndex = 0;
+            this.label3WordMin.Text = "слов в минуту";
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -529,6 +617,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1852, 978);
+            this.Controls.Add(this.panel2Result);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1Timer);
             this.Controls.Add(this.button1UpdateTargetText);
@@ -554,6 +643,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.panel2Result.ResumeLayout(false);
+            this.panel2Result.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,6 +681,13 @@
         private System.Windows.Forms.Label label3_50Wor;
         private System.Windows.Forms.Label label2_25Wor;
         private System.Windows.Forms.Label label1_10Wor;
+        private System.Windows.Forms.Panel panel2Result;
+        private System.Windows.Forms.Label label8CountMistake;
+        private System.Windows.Forms.Label label7Mistake;
+        private System.Windows.Forms.Label label6AccuracyPer;
+        private System.Windows.Forms.Label label5Accuracy;
+        private System.Windows.Forms.Label label4CountWordMin;
+        private System.Windows.Forms.Label label3WordMin;
     }
 }
 

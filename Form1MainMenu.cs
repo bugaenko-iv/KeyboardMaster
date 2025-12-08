@@ -16,7 +16,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         bool isLeftMouseDown;
         bool isActiveModeTime, isActiveLabel15Sec, isActiveLabel30Sec, isActiveLabel60Sec, isActiveLabel120Sec;
         bool isActiveModeWord, isActiveLabel10Wor, isActiveLabel25Wor, isActiveLabel50Wor, isActiveLabel100Wor;
-        int countMistake = 0;
+        bool isTimeStop;
+        double countInputSymb = 0, countMistake = 0, percentAccuracy = 0, countWordsMin = 0;
         int targetIndex;
         int seconds = 0, words = 0;
         string[] arrayText = {"и", "в", "не", "он", "на", "я", "что", "тот", "быть", "с", "а", "весь", "это", "как", "она", "по", "но", "они", "к", "у", "ты", "из", "мы", "за", "вы", "так", "же", "от", "сказать", "этот", "который", "мочь", "человек", "о", "один", "еще", "бы", "такой", "только", "себя", "свое", "какой", "когда", "уже", "для", "вот", "кто", "да", "говорить", "год", "знать", "можно", "статья", "если", "очень", "ну", "вот", "потом", "дело", "жизнь", "первый", "день", "тут", "во", "ничто", "очень", "со", "хотеть", "ли", "при", "голова", "надо", "без", "видеть", "идти", "теперь", "тоже", "стоять", "друг", "дом", "теперь", "можно", "после", "здесь", "думать", "место", "лицо", "друг", "жить", "делать", "через", "общий", "знать", "новый", "два", "видеть", "идти", "один", "под", "где", "потом", "делать", "два", "при", "мой", "идти", "хотеть", "жить", "работа", "рука", "раз", "слово", "солнце", "море", "ветер", "небо", "земля", "свет", "трава", "звезда", "дождь", "огонь", "река", "утро", "вечер", "ночь", "звук", "цвет", "вкус", "запах", "чувство", "радость", "печаль", "надежда", "вера", "любовь", "смерть", "время", "путь", "сила", "мир", "красота", "правда", "ложь", "ум", "душа", "тело", "сердце", "мысль", "давать", "нога", "книга", "писать", "читать", "учить", "студент", "учитель", "класс", "урок", "задание", "ответ", "вопрос", "причина", "следствие", "результат", "процесс", "метод", "способ", "пример", "правило", "исключение", "структура", "элемент", "функция", "задача", "решение", "проблема", "сложность", "легкость", "быстро", "медленно", "громко", "тихо", "высоко", "низко", "далеко", "близко", "внутри", "наружи", "слева", "справа", "вперед", "назад", "вверх", "вниз", "всегда", "никогда", "часто", "редко", "иногда", "обычно", "везде", "начинать", "получать", "делать", "смотреть", "думать", "ждать", "искать", "находить", "создавать", "использовать", "понимать", "чувствовать", "помнить", "забывать", "менять", "оставаться", "появляться", "исчезать", "расти", "падать", "лежать", "стоять", "сидеть", "бежать", "лететь", "плыть", "идти", "ехать", "возвращаться", "приходить", "уходить", "заходить", "выходить", "входить", "лежать", "сидеть", "стоять", "висеть", "лежать", "стоять", "сидеть", "смотреть", "слушать", "говорить", "писать", "читать", "учить", "работать", "отдыхать", "спать", "есть", "пить", "дышать", "жить", "умирать", "рождаться", "расти", "стареть", "выздоравливать", "улыбаться", "плакать", "смеяться", "грустить", "злиться", "радоваться", "удивляться", "бояться", "надеяться", "верить", "любить", "ненавидеть", "просить", "давать", "брать", "отдавать", "принимать", "отправлять", "получать", "делать", "создавать", "использовать", "применять", "строить", "разрушать", "открывать", "закрывать", "начинать", "заканчивать", "продолжать", "останавливаться", "двигаться", "спешить", "литьмед", "торопиться", "опаздывать", "успевать", "готовить", "варить", "жарить", "печь", "резать", "чистить", "мыть", "сушить", "гладить", "стирать", "убирать", "ремонтировать", "чинить"};
@@ -124,25 +125,46 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             if (targetIndex < targetText.Length)
             {
-                if (timer1.Enabled == false && isActiveModeTime)
+                if (isActiveModeTime && !isTimeStop)
                 {
-                    label1Timer.Visible = true;
-                    timer1.Enabled = true;
+                    if (timer1.Enabled == false)
+                    {
+                        label1Timer.Visible = true;
+                        timer1.Enabled = true;
+                    }
+
+                    if (e.KeyChar == targetText[targetIndex])
+                    {
+                        countInputSymb++;
+
+                        richTextBox1Typing.Select(targetIndex + 1, 1);
+                        richTextBox1Typing.SelectionColor = Color.White;
+
+                        targetIndex++;
+                    }
+                    else
+                    {
+                        richTextBox1Typing.Select(targetIndex, 1);
+                        richTextBox1Typing.SelectionBackColor = Color.FromArgb(250, 128, 114);
+
+                        countMistake++;
+                    }
                 }
 
-                if (e.KeyChar == targetText[targetIndex])
+                if (isActiveModeWord)
                 {
-                    richTextBox1Typing.Select(targetIndex + 1, 1);
-                    richTextBox1Typing.SelectionColor = Color.White;
+                    if (e.KeyChar == targetText[targetIndex])
+                    {
+                        richTextBox1Typing.Select(targetIndex + 1, 1);
+                        richTextBox1Typing.SelectionColor = Color.White;
 
-                    targetIndex++;
-                }
-                else
-                {
-                    richTextBox1Typing.Select(targetIndex, 1);
-                    richTextBox1Typing.SelectionBackColor = Color.FromArgb(250, 128, 114);
-
-                    countMistake++;
+                        targetIndex++;
+                    }
+                    else
+                    {
+                        richTextBox1Typing.Select(targetIndex, 1);
+                        richTextBox1Typing.SelectionBackColor = Color.FromArgb(250, 128, 114);
+                    }
                 }
             }
         }
@@ -161,6 +183,31 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             else
             {
                 timer1.Enabled = false;
+                isTimeStop = true;
+
+                if (isActiveLabel15Sec)
+                {
+                    countWordsMin = (countInputSymb / 5) * (60 / Convert.ToInt32(label1_15Sec.Text));
+                }
+                if (isActiveLabel30Sec)
+                {
+                    countWordsMin = (countInputSymb / 5) * (60 / Convert.ToInt32(label2_30Sec.Text));
+                }
+                if (isActiveLabel60Sec)
+                {
+                    countWordsMin = (countInputSymb / 5) * (60 / Convert.ToInt32(label3_60Sec.Text));
+                }
+                if (isActiveLabel120Sec)
+                {
+                    countWordsMin = (countInputSymb / 5) * (60 / Convert.ToInt32(label4_120Sec.Text));
+                }
+
+                percentAccuracy = (countInputSymb / (countInputSymb + countMistake)) * 100;
+
+                label4CountWordMin.Text = Convert.ToInt32(countWordsMin).ToString();
+                label6AccuracyPer.Text = Convert.ToInt32(percentAccuracy).ToString();
+                label8CountMistake.Text = countMistake.ToString();
+                panel2Result.Visible = true;
             }
 
             label1Timer.Text = seconds.ToString();
@@ -175,6 +222,10 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         {
             targetIndex = 0;
             targetText = null;
+            countInputSymb = 0;
+            countMistake = 0;
+            panel2Result.Visible = false;
+            isTimeStop = false;
 
             Random random = new Random();
             int countIteration = 0;
@@ -435,7 +486,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             isActiveLabel120Sec = false;
             label4_120Sec.ForeColor = Color.DarkGray;
 
-            if (timer1.Enabled == true)
+            if (timer1.Enabled == true || isTimeStop)
             {
                 generationTargetText();
 
@@ -459,7 +510,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             isActiveLabel120Sec = false;
             label4_120Sec.ForeColor = Color.DarkGray;
 
-            if (timer1.Enabled == true)
+            if (timer1.Enabled == true || isTimeStop)
             {
                 generationTargetText();
 
@@ -483,7 +534,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             isActiveLabel120Sec = false;
             label4_120Sec.ForeColor = Color.DarkGray;
 
-            if (timer1.Enabled == true)
+            if (timer1.Enabled == true || isTimeStop)
             {
                 generationTargetText();
 
@@ -507,7 +558,7 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             isActiveLabel60Sec = false;
             label3_60Sec.ForeColor = Color.DarkGray;
 
-            if (timer1.Enabled == true)
+            if (timer1.Enabled == true || isTimeStop)
             {
                 generationTargetText();
 
@@ -584,6 +635,10 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             {
                 label1Timer.Visible = false;
                 timer1.Enabled = false;
+            }
+            else
+            {
+                label1Timer.Visible = false;
             }
         }
 
