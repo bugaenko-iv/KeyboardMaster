@@ -40,14 +40,11 @@
             this.guna2Button3LeaveAcc = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2EnterProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1Auth = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.button1UpdateTargetText = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1Timer = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4_100Wor = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label7Education = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3_50Wor = new System.Windows.Forms.Label();
             this.label6_Words = new System.Windows.Forms.Label();
@@ -66,13 +63,16 @@
             this.label5Accuracy = new System.Windows.Forms.Label();
             this.label4CountWordMin = new System.Windows.Forms.Label();
             this.label3WordMin = new System.Windows.Forms.Label();
+            this.button1UpdateTargetText = new System.Windows.Forms.Button();
+            this.guna2PictureBox1UserLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1ControlForm1.SuspendLayout();
             this.panel1ForControlButton.SuspendLayout();
             this.guna2Panel1SpeedMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.panel2Result.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1ControlForm1
@@ -242,63 +242,6 @@
             this.guna2Button1Auth.TabIndex = 13;
             this.guna2Button1Auth.Text = "Статистика пользователей";
             // 
-            // guna2PictureBox1UserLogo
-            // 
-            this.guna2PictureBox1UserLogo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1UserLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox1UserLogo.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.user_logo_grey;
-            this.guna2PictureBox1UserLogo.ImageRotate = 0F;
-            this.guna2PictureBox1UserLogo.Location = new System.Drawing.Point(1751, 102);
-            this.guna2PictureBox1UserLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox1UserLogo.Name = "guna2PictureBox1UserLogo";
-            this.guna2PictureBox1UserLogo.Size = new System.Drawing.Size(20, 22);
-            this.guna2PictureBox1UserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1UserLogo.TabIndex = 8;
-            this.guna2PictureBox1UserLogo.TabStop = false;
-            this.guna2PictureBox1UserLogo.Click += new System.EventHandler(this.guna2PictureBox1UserLogo_Click);
-            this.guna2PictureBox1UserLogo.MouseEnter += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseEnter);
-            this.guna2PictureBox1UserLogo.MouseLeave += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseLeave);
-            // 
-            // guna2PictureBox1Logo
-            // 
-            this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox1Logo.Enabled = false;
-            this.guna2PictureBox1Logo.ErrorImage = null;
-            this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
-            this.guna2PictureBox1Logo.ImageRotate = 0F;
-            this.guna2PictureBox1Logo.InitialImage = null;
-            this.guna2PictureBox1Logo.Location = new System.Drawing.Point(32, 60);
-            this.guna2PictureBox1Logo.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox1Logo.Name = "guna2PictureBox1Logo";
-            this.guna2PictureBox1Logo.Size = new System.Drawing.Size(259, 92);
-            this.guna2PictureBox1Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1Logo.TabIndex = 0;
-            this.guna2PictureBox1Logo.TabStop = false;
-            this.guna2PictureBox1Logo.UseTransparentBackground = true;
-            // 
-            // button1UpdateTargetText
-            // 
-            this.button1UpdateTargetText.BackColor = System.Drawing.Color.Transparent;
-            this.button1UpdateTargetText.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1UpdateTargetText.FlatAppearance.BorderSize = 0;
-            this.button1UpdateTargetText.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1UpdateTargetText.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1UpdateTargetText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1UpdateTargetText.ForeColor = System.Drawing.Color.Transparent;
-            this.button1UpdateTargetText.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.update_gray;
-            this.button1UpdateTargetText.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1UpdateTargetText.Location = new System.Drawing.Point(920, 628);
-            this.button1UpdateTargetText.Margin = new System.Windows.Forms.Padding(4);
-            this.button1UpdateTargetText.Name = "button1UpdateTargetText";
-            this.button1UpdateTargetText.Size = new System.Drawing.Size(37, 32);
-            this.button1UpdateTargetText.TabIndex = 16;
-            this.button1UpdateTargetText.UseVisualStyleBackColor = false;
-            this.button1UpdateTargetText.Click += new System.EventHandler(this.button1UpdateTargetText_Click);
-            this.button1UpdateTargetText.MouseEnter += new System.EventHandler(this.button1UpdateTargetText_MouseEnter);
-            this.button1UpdateTargetText.MouseLeave += new System.EventHandler(this.button1UpdateTargetText_MouseLeave);
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -322,7 +265,7 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.Controls.Add(this.label4_100Wor);
-            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label7Education);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.label3_50Wor);
             this.guna2Panel1.Controls.Add(this.label6_Words);
@@ -357,17 +300,20 @@
             this.label4_100Wor.MouseEnter += new System.EventHandler(this.label4_100Wor_MouseEnter);
             this.label4_100Wor.MouseLeave += new System.EventHandler(this.label4_100Wor_MouseLeave);
             // 
-            // label2
+            // label7Education
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(552, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "обучение";
+            this.label7Education.AutoSize = true;
+            this.label7Education.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label7Education.ForeColor = System.Drawing.Color.DarkGray;
+            this.label7Education.Location = new System.Drawing.Point(552, 15);
+            this.label7Education.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7Education.Name = "label7Education";
+            this.label7Education.Size = new System.Drawing.Size(87, 20);
+            this.label7Education.TabIndex = 27;
+            this.label7Education.Text = "обучение";
+            this.label7Education.Click += new System.EventHandler(this.label7Education_Click);
+            this.label7Education.MouseEnter += new System.EventHandler(this.label7Education_MouseEnter);
+            this.label7Education.MouseLeave += new System.EventHandler(this.label7Education_MouseLeave);
             // 
             // label1
             // 
@@ -610,6 +556,63 @@
             this.label3WordMin.TabIndex = 0;
             this.label3WordMin.Text = "слов в минуту";
             // 
+            // button1UpdateTargetText
+            // 
+            this.button1UpdateTargetText.BackColor = System.Drawing.Color.Transparent;
+            this.button1UpdateTargetText.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1UpdateTargetText.FlatAppearance.BorderSize = 0;
+            this.button1UpdateTargetText.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1UpdateTargetText.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1UpdateTargetText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1UpdateTargetText.ForeColor = System.Drawing.Color.Transparent;
+            this.button1UpdateTargetText.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.update_gray;
+            this.button1UpdateTargetText.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button1UpdateTargetText.Location = new System.Drawing.Point(920, 628);
+            this.button1UpdateTargetText.Margin = new System.Windows.Forms.Padding(4);
+            this.button1UpdateTargetText.Name = "button1UpdateTargetText";
+            this.button1UpdateTargetText.Size = new System.Drawing.Size(37, 32);
+            this.button1UpdateTargetText.TabIndex = 16;
+            this.button1UpdateTargetText.UseVisualStyleBackColor = false;
+            this.button1UpdateTargetText.Click += new System.EventHandler(this.button1UpdateTargetText_Click);
+            this.button1UpdateTargetText.MouseEnter += new System.EventHandler(this.button1UpdateTargetText_MouseEnter);
+            this.button1UpdateTargetText.MouseLeave += new System.EventHandler(this.button1UpdateTargetText_MouseLeave);
+            // 
+            // guna2PictureBox1UserLogo
+            // 
+            this.guna2PictureBox1UserLogo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1UserLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1UserLogo.Image = global::Клавиатурный_тренажер_KeyboardMaster.Properties.Resources.user_logo_grey;
+            this.guna2PictureBox1UserLogo.ImageRotate = 0F;
+            this.guna2PictureBox1UserLogo.Location = new System.Drawing.Point(1751, 102);
+            this.guna2PictureBox1UserLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1UserLogo.Name = "guna2PictureBox1UserLogo";
+            this.guna2PictureBox1UserLogo.Size = new System.Drawing.Size(20, 22);
+            this.guna2PictureBox1UserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1UserLogo.TabIndex = 8;
+            this.guna2PictureBox1UserLogo.TabStop = false;
+            this.guna2PictureBox1UserLogo.Click += new System.EventHandler(this.guna2PictureBox1UserLogo_Click);
+            this.guna2PictureBox1UserLogo.MouseEnter += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseEnter);
+            this.guna2PictureBox1UserLogo.MouseLeave += new System.EventHandler(this.guna2PictureBox1UserLogo_MouseLeave);
+            // 
+            // guna2PictureBox1Logo
+            // 
+            this.guna2PictureBox1Logo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1Logo.Enabled = false;
+            this.guna2PictureBox1Logo.ErrorImage = null;
+            this.guna2PictureBox1Logo.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1Logo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1Logo.Image")));
+            this.guna2PictureBox1Logo.ImageRotate = 0F;
+            this.guna2PictureBox1Logo.InitialImage = null;
+            this.guna2PictureBox1Logo.Location = new System.Drawing.Point(32, 60);
+            this.guna2PictureBox1Logo.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1Logo.Name = "guna2PictureBox1Logo";
+            this.guna2PictureBox1Logo.Size = new System.Drawing.Size(259, 92);
+            this.guna2PictureBox1Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1Logo.TabIndex = 0;
+            this.guna2PictureBox1Logo.TabStop = false;
+            this.guna2PictureBox1Logo.UseTransparentBackground = true;
+            // 
             // Form1MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -639,12 +642,12 @@
             this.panel1ControlForm1.ResumeLayout(false);
             this.panel1ForControlButton.ResumeLayout(false);
             this.guna2Panel1SpeedMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.panel2Result.ResumeLayout(false);
             this.panel2Result.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1UserLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,7 +678,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label5_Time;
         private System.Windows.Forms.Label label6_Words;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7Education;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4_100Wor;
         private System.Windows.Forms.Label label3_50Wor;

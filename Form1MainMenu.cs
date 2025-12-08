@@ -790,5 +790,26 @@ namespace Клавиатурный_тренажер_KeyboardMaster
         #endregion
 
 
+        #region Анимация кнопки "обучение" и переход на форму "обучение"
+
+        private void label7Education_MouseEnter(object sender, EventArgs e)
+        {
+            label7Education.ForeColor = Color.White;
+        }
+
+        private void label7Education_MouseLeave(object sender, EventArgs e)
+        {
+            label7Education.ForeColor = Color.DarkGray;
+        }
+
+        private void label7Education_Click(object sender, EventArgs e)
+        {
+            Form4Education form4Education = new Form4Education();
+            this.Hide();
+            form4Education.Show();
+        }
+
+        #endregion
+
     }
 }
