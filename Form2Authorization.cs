@@ -372,6 +372,12 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 {
                     Class1InfoAboutUserOrAdmin.nameUser = dataFromBDuser.ToString();
 
+                    string getIdUserQuery = "select id_user from users where login = @login";
+                    MySqlCommand commandGetIdUserQuery = new MySqlCommand(getIdUserQuery, connection);
+                    commandGetIdUserQuery.Parameters.AddWithValue("@login", guna2TextBox1LoginAuth.Text);
+                    object id = commandGetIdUserQuery.ExecuteScalar();
+                    Class1InfoAboutUserOrAdmin.idUser = Convert.ToInt32(id);
+
                     Form1MainMenu form1MainMenu = new Form1MainMenu();
                     this.Hide();
                     form1MainMenu.Show();

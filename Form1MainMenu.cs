@@ -43,6 +43,8 @@ namespace Клавиатурный_тренажер_KeyboardMaster
             label1Timer.Text = seconds.ToString();
 
             generationTargetText();
+
+            MessageBox.Show(Class1InfoAboutUserOrAdmin.idUser.ToString());
         }
 
         private void Form1MainMenu_Click(object sender, EventArgs e)
@@ -208,6 +210,31 @@ namespace Клавиатурный_тренажер_KeyboardMaster
                 label6AccuracyPer.Text = Convert.ToInt32(percentAccuracy).ToString();
                 label8CountMistake.Text = countMistake.ToString();
                 panel2Result.Visible = true;
+
+                if (Class1InfoAboutUserOrAdmin.idUser != 0)
+                {
+                    string connectionString = "server = localhost; user = root; password = aris; database = KeyboardMaster";
+
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            connection.Open();
+
+                            string addNewStatisticsQuery = "insert into statistics (id_user, count_word_min, accuracy_per, count_mistake) values (@id_user, @count_word_min, @accuracy_per, @count_mistake)";
+                            MySqlCommand commandAddNewStatistics = new MySqlCommand(addNewStatisticsQuery, connection);
+                            commandAddNewStatistics.Parameters.AddWithValue("@id_user", Class1InfoAboutUserOrAdmin.idUser);
+                            commandAddNewStatistics.Parameters.AddWithValue("@count_word_min", Convert.ToInt32(countWordsMin));
+                            commandAddNewStatistics.Parameters.AddWithValue("@accuracy_per", Convert.ToInt32(percentAccuracy));
+                            commandAddNewStatistics.Parameters.AddWithValue("@count_mistake", countMistake);
+                            commandAddNewStatistics.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Ошибка при добавлении статистики в базу данных: " + ex.Message);
+                        }
+                    }
+                }
             }
 
             label1Timer.Text = seconds.ToString();

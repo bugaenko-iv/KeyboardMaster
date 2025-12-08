@@ -9,5 +9,6 @@ namespace Клавиатурный_тренажер_KeyboardMaster
     public class Class1InfoAboutUserOrAdmin
     {
         public static string nameUser;
+        public static int idUser;
     }
 }

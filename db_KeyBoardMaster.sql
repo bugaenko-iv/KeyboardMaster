@@ -18,17 +18,18 @@ password varchar(100),
 keyword varchar(100)
 );
 
-insert into users values
-(1, "IvanBug", "Aris444741032", "cat"),
-(2, "EgorD", "Shanti12345", "dog"),
-(3, "Ermol", "MakanTop123", "rap"),
-(4, "ChichukBasket", "1Lakers2", "nba");
+create table statistics
+(
+id_statistics int primary key auto_increment,
+id_user int,
+count_word_min int,
+accuracy_per int,
+count_mistake int
+);
 
 insert into admin values
 (1, "Admin", "Aris444741032", "cat");
 
-drop table users;
-drop table admin;
-
 select * from users;
 select * from admin;
+select * from statistics;
